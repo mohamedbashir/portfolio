@@ -6,8 +6,19 @@
 <title>Mohamed Bashir — CV / Resume</title>
 <meta name="description" content="Curriculum Vitae of Mohamed Bashir — Backend Developer specializing in .NET Core, microservices, and scalable systems across transportation, government, and finance." />
 <meta name="theme-color" content="#F2EFE8" />
-<meta name="color-scheme" content="light" />
+<meta name="color-scheme" content="light dark" />
 <meta name="robots" content="index, follow" />
+<script>
+  (function(){
+    try {
+      var saved = localStorage.getItem('theme');
+      var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+      var m = document.querySelector('meta[name="theme-color"]');
+      if (m) m.setAttribute('content', theme === 'dark' ? '#14120F' : '#F2EFE8');
+    } catch(e) {}
+  })();
+</script>
 <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%23161616"/><text x="50%25" y="56%25" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, serif" font-style="italic" font-weight="500" font-size="32" fill="%23F2EFE8">m</text></svg>' />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +37,26 @@
   --accent-warm: #A8431E;
   --border: rgba(22,22,22,0.10);
   --border-strong: rgba(22,22,22,0.20);
+  --shadow-color: rgba(22,22,22,0.22);
+  --shadow-color-2: rgba(22,22,22,0.06);
+  color-scheme: light;
 }
+[data-theme="dark"] {
+  --bg: #14120F;
+  --bg-2: #1B1815;
+  --card: #1F1C18;
+  --paper: #1C1915;
+  --text: #EFEBE2;
+  --muted: #948C82;
+  --accent: #95B96E;
+  --accent-warm: #E0855F;
+  --border: rgba(239,235,226,0.10);
+  --border-strong: rgba(239,235,226,0.22);
+  --shadow-color: rgba(0,0,0,0.55);
+  --shadow-color-2: rgba(0,0,0,0.30);
+  color-scheme: dark;
+}
+html { transition: background-color 0.35s ease, color 0.35s ease; }
 html { scroll-behavior: smooth; }
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -84,6 +114,31 @@ a { color: inherit; text-decoration: none; }
 }
 .toolbar .back::before { content: '←'; }
 .toolbar .pdf::before { content: '↓'; }
+.toolbar-right {
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.theme-toggle {
+  width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+.theme-toggle:hover {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+  transform: translateY(-1px);
+}
+.theme-toggle svg { width: 17px; height: 17px; }
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: inline-block; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: inline-block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
 /* ============== PAPER / CV CARD ============== */
 .paper {
@@ -93,10 +148,11 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--border);
   border-radius: 20px;
   box-shadow:
-    0 30px 80px -30px rgba(22,22,22,0.22),
-    0 6px 18px -4px rgba(22,22,22,0.06);
+    0 30px 80px -30px var(--shadow-color),
+    0 6px 18px -4px var(--shadow-color-2);
   overflow: hidden;
   padding: 56px 60px;
+  transition: background 0.35s ease, border-color 0.35s ease;
 }
 @media (max-width: 720px) {
   body { padding: 24px 14px; }
@@ -372,8 +428,23 @@ a { color: inherit; text-decoration: none; }
   margin: 12mm 14mm;
 }
 @media print {
+  /* Always print as light, no matter what theme the user picked */
+  :root, [data-theme="dark"] {
+    --bg: #F2EFE8;
+    --bg-2: #EAE5DC;
+    --card: #F8F6F1;
+    --paper: #FFFFFF;
+    --text: #161616;
+    --muted: #6B6661;
+    --accent: #3F4F2E;
+    --accent-warm: #A8431E;
+    --border: rgba(22,22,22,0.10);
+    --border-strong: rgba(22,22,22,0.20);
+    color-scheme: light;
+  }
   body {
     background: #fff !important;
+    color: #161616 !important;
     padding: 0 !important;
     font-size: 10.5pt;
     line-height: 1.45;
@@ -416,7 +487,18 @@ a { color: inherit; text-decoration: none; }
 <!-- TOOLBAR (hidden in print) -->
 <nav class="toolbar" aria-label="Document actions">
   <a href="index.html" class="back" aria-label="Back to portfolio">Back to portfolio</a>
-  <button type="button" class="primary pdf" onclick="window.print()" aria-label="Download CV as PDF">Download PDF</button>
+  <div class="toolbar-right">
+    <button type="button" id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+      </svg>
+    </button>
+    <button type="button" class="primary pdf" onclick="window.print()" aria-label="Download CV as PDF">Download PDF</button>
+  </div>
 </nav>
 
 <!-- CV PAPER -->
@@ -630,6 +712,19 @@ a { color: inherit; text-decoration: none; }
 </article>
 
 <script>
+  (function(){
+    var btn = document.getElementById('themeToggle');
+    if (!btn) return;
+    btn.addEventListener('click', function(){
+      var cur = document.documentElement.getAttribute('data-theme') || 'light';
+      var next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch(e) {}
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', next === 'dark' ? '#14120F' : '#F2EFE8');
+    });
+  })();
+
   if (window.location.hash === '#print') {
     setTimeout(() => window.print(), 350);
   }

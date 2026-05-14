@@ -6,7 +6,18 @@
 <title>Mohamed Bashir — Backend Developer</title>
 <meta name="description" content="Mohamed Bashir — Backend Developer building scalable .NET Core systems and microservices across transportation, government, and finance. ASP.NET Core, EF Core, SQL Server, Docker, Azure / AWS." />
 <meta name="theme-color" content="#F2EFE8" />
-<meta name="color-scheme" content="light" />
+<meta name="color-scheme" content="light dark" />
+<script>
+  (function(){
+    try {
+      var saved = localStorage.getItem('theme');
+      var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+      var m = document.querySelector('meta[name="theme-color"]');
+      if (m) m.setAttribute('content', theme === 'dark' ? '#14120F' : '#F2EFE8');
+    } catch(e) {}
+  })();
+</script>
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Mohamed Bashir — Backend Developer" />
 <meta property="og:description" content="Backend Developer crafting scalable .NET systems. ASP.NET Core · Microservices · Cloud." />
@@ -30,7 +41,36 @@
   --accent: #3F4F2E;
   --accent-warm: #A8431E;
   --border: rgba(22,22,22,0.10);
+  --nav-bg: rgba(242,239,232,0.85);
+  --photo-grad-1: #DDD5C5;
+  --photo-grad-2: #C8BFAC;
+  --photo-accent: rgba(168,67,30,0.25);
+  --glow-accent: rgba(63,82,46,0.08);
+  --glow-accent-strong: rgba(63,82,46,0.10);
+  --pulse-ring: rgba(63,82,46,0.15);
+  --pulse-ring-out: rgba(63,82,46,0);
+  color-scheme: light;
 }
+[data-theme="dark"] {
+  --bg: #14120F;
+  --bg-2: #1B1815;
+  --card: #1F1C18;
+  --text: #EFEBE2;
+  --muted: #948C82;
+  --accent: #95B96E;
+  --accent-warm: #E0855F;
+  --border: rgba(239,235,226,0.10);
+  --nav-bg: rgba(20,18,15,0.85);
+  --photo-grad-1: #2E2A25;
+  --photo-grad-2: #3D3830;
+  --photo-accent: rgba(224,133,95,0.20);
+  --glow-accent: rgba(149,185,110,0.10);
+  --glow-accent-strong: rgba(149,185,110,0.13);
+  --pulse-ring: rgba(149,185,110,0.20);
+  --pulse-ring-out: rgba(149,185,110,0);
+  color-scheme: dark;
+}
+html { transition: background-color 0.35s ease, color 0.35s ease; }
 html { scroll-behavior: smooth; }
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -66,10 +106,11 @@ img { max-width: 100%; display: block; }
 .navbar {
   position: sticky; top: 0;
   z-index: 50;
-  background: rgba(242,239,232,0.85);
+  background: var(--nav-bg);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
+  transition: background 0.35s ease, border-color 0.35s ease;
 }
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
@@ -156,12 +197,12 @@ img { max-width: 100%; display: block; }
   content: ''; width: 8px; height: 8px;
   background: var(--accent);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(63,82,46,0.15);
+  box-shadow: 0 0 0 4px var(--pulse-ring);
   animation: pulse 2.4s infinite;
 }
 @keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 4px rgba(63,82,46,0.15); }
-  50% { box-shadow: 0 0 0 8px rgba(63,82,46,0); }
+  0%, 100% { box-shadow: 0 0 0 4px var(--pulse-ring); }
+  50% { box-shadow: 0 0 0 8px var(--pulse-ring-out); }
 }
 .hero h1 {
   font-size: clamp(2.6rem, 6.8vw, 6rem);
@@ -329,7 +370,7 @@ section { padding: 130px 0; position: relative; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), rgba(63,82,46,0.08), transparent 60%);
+  background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), var(--glow-accent), transparent 60%);
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -391,8 +432,8 @@ section { padding: 130px 0; position: relative; }
 .about-photo {
   aspect-ratio: 1 / 1.15;
   background:
-    radial-gradient(circle at 30% 20%, rgba(168,67,30,0.25), transparent 60%),
-    linear-gradient(135deg, #DDD5C5, #C8BFAC);
+    radial-gradient(circle at 30% 20%, var(--photo-accent), transparent 60%),
+    linear-gradient(135deg, var(--photo-grad-1), var(--photo-grad-2));
   border-radius: 24px;
   display: flex; align-items: flex-end;
   padding: 30px;
@@ -408,7 +449,7 @@ section { padding: 130px 0; position: relative; }
   position: absolute;
   top: 24px; right: 28px;
   font-size: 1.6rem;
-  color: var(--bg);
+  color: #F2EFE8;
   font-style: normal;
   z-index: 2;
   text-shadow: 0 2px 12px rgba(0,0,0,0.35);
@@ -427,7 +468,7 @@ section { padding: 130px 0; position: relative; }
   z-index: 2;
   font-family: 'Fraunces', serif;
   font-style: italic;
-  color: var(--bg);
+  color: #F2EFE8;
   font-size: 1rem;
   background: rgba(22,22,22,0.55);
   backdrop-filter: blur(6px);
@@ -487,7 +528,7 @@ section { padding: 130px 0; position: relative; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(63,82,46,0.10), transparent 60%);
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), var(--glow-accent-strong), transparent 60%);
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -923,6 +964,36 @@ a:focus-visible, button:focus-visible {
   .orbit-badge { width: 90px; height: 90px; bottom: 20px; left: 20px; }
 }
 
+/* ============== THEME TOGGLE ============== */
+.nav-actions {
+  display: flex; align-items: center; gap: 22px;
+}
+.theme-toggle {
+  width: 38px; height: 38px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+.theme-toggle:hover {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+  transform: translateY(-1px);
+}
+.theme-toggle svg { width: 17px; height: 17px; }
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: inline-block; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: inline-block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+@media (max-width: 820px) {
+  .nav-actions { gap: 12px; }
+}
+
 /* ============== HERO ACTIONS ============== */
 .hero-actions {
   display: flex; gap: 14px; flex-wrap: wrap;
@@ -969,15 +1040,26 @@ a:focus-visible, button:focus-visible {
       <span class="logo-dot"></span>
       Mohamed Bashir
     </a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#capabilities">Capabilities</a></li>
-      <li><a href="#principles">Principles</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="#contact" class="nav-cta">Work with Me</a></li>
-    </ul>
+    <div class="nav-actions">
+      <button type="button" id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#principles">Principles</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="#contact" class="nav-cta">Work with Me</a></li>
+      </ul>
+    </div>
   </div>
 </header>
 
@@ -1385,6 +1467,20 @@ a:focus-visible, button:focus-visible {
 </footer>
 
 <script>
+  /* Theme toggle — persists choice, falls back to OS preference */
+  (function(){
+    var btn = document.getElementById('themeToggle');
+    if (!btn) return;
+    btn.addEventListener('click', function(){
+      var cur = document.documentElement.getAttribute('data-theme') || 'light';
+      var next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch(e) {}
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', next === 'dark' ? '#14120F' : '#F2EFE8');
+    });
+  })();
+
   /* Reveal on scroll */
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
