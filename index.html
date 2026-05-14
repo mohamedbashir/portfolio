@@ -471,12 +471,53 @@ section { padding: 130px 0; position: relative; }
   grid-template-columns: 200px 1fr 110px;
   gap: 40px;
   align-items: start;
-  padding: 36px 0;
+  padding: 36px 24px;
+  margin: 0 -24px;
   border-top: 1px solid var(--border);
-  transition: padding-left 0.3s ease;
+  border-radius: 0;
+  position: relative;
+  isolation: isolate;
+  transition:
+    background-color 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .exp-list .exp-row:last-child { border-bottom: 1px solid var(--border); }
-.exp-row:hover { padding-left: 14px; }
+
+/* Marker that slides in from the left */
+.exp-row::before {
+  content: '→';
+  position: absolute;
+  left: 0; top: 38px;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateX(-12px);
+  transition:
+    opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+/* Soft inner content slide */
+.exp-row > * {
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1), color 0.45s ease;
+}
+
+.exp-row:hover {
+  background-color: rgba(63,82,46,0.05);
+  border-top-color: rgba(63,82,46,0.35);
+  border-radius: 18px;
+}
+.exp-row:hover + .exp-row { border-top-color: rgba(63,82,46,0.35); }
+.exp-row:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+.exp-row:hover > * { transform: translateX(18px); }
+.exp-row:hover .exp-title { color: var(--accent); }
 .exp-period {
   color: var(--muted);
   font-size: 0.9rem;
@@ -521,7 +562,14 @@ section { padding: 130px 0; position: relative; }
   font-size: 1.05rem;
 }
 @media (max-width: 800px) {
-  .exp-row { grid-template-columns: 1fr; gap: 10px; }
+  .exp-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 0;
+    padding: 28px 0;
+  }
+  .exp-row::before { display: none; }
+  .exp-row:hover > * { transform: translateX(8px); }
   .exp-duration { text-align: left; }
 }
 
