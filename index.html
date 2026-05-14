@@ -923,6 +923,30 @@ a:focus-visible, button:focus-visible {
   .orbit-badge { width: 90px; height: 90px; bottom: 20px; left: 20px; }
 }
 
+/* ============== HERO ACTIONS ============== */
+.hero-actions {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  margin-top: 36px;
+}
+.hero-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 13px 22px;
+  border-radius: 100px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+  border: 1px solid var(--text);
+}
+.hero-btn.primary { background: var(--text); color: var(--bg); }
+.hero-btn.primary:hover { background: var(--accent); border-color: var(--accent); transform: translateY(-1px); }
+.hero-btn.ghost { background: transparent; color: var(--text); }
+.hero-btn.ghost:hover { background: var(--text); color: var(--bg); transform: translateY(-1px); }
+.hero-btn::after {
+  content: '→';
+  transition: transform 0.25s ease;
+}
+.hero-btn:hover::after { transform: translateX(3px); }
+
 /* ============== LIVE STATUS ============== */
 .live-clock { font-variant-numeric: tabular-nums; }
 .live-clock-pulse {
@@ -951,6 +975,7 @@ a:focus-visible, button:focus-visible {
       <li><a href="#principles">Principles</a></li>
       <li><a href="#work">Work</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="cv.html">CV</a></li>
       <li><a href="#contact" class="nav-cta">Work with Me</a></li>
     </ul>
   </div>
@@ -972,6 +997,10 @@ a:focus-visible, button:focus-visible {
       <div class="hero-meta reveal">
         <div><strong>4+</strong>Years building production systems</div>
         <div><strong>6+</strong>Live systems shipped</div>
+      </div>
+      <div class="hero-actions reveal">
+        <a href="cv.html" class="hero-btn primary">View CV</a>
+        <a href="#contact" class="hero-btn ghost">Get in touch</a>
       </div>
     </div>
     <aside class="hero-right reveal">
@@ -1329,6 +1358,7 @@ a:focus-visible, button:focus-visible {
           <li><a href="#capabilities">Capabilities</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="cv.html">CV / Resume</a></li>
         </ul>
       </div>
       <div class="footer-col">
