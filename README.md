@@ -6,19 +6,18 @@ Live: _add your GitHub Pages URL here once deployed_
 
 ## Stack
 
-Pure HTML / CSS / vanilla JavaScript — no build step, no dependencies. A single `index.html` file.
+Single-file static site. Pure HTML + CSS + vanilla JavaScript. No build step, no dependencies.
 
-## Features
-
-- Animated hero with typewriter status, 3D-tilt card, magnetic CTAs
-- Cursor-following aurora spotlight and per-card hover gradient
-- Scroll progress bar and scroll-spy nav
-- Animated count-up stats
-- Three-palette theme switcher (Aurora / Ember / Ocean) — persists in `localStorage`
-- Floating quick-contact dock
-- Vim-style keyboard navigation: `j` / `k` sections, `gg` top, `G` bottom, `?` help
+- Typography: **Fraunces** (editorial serif) + **Inter** (sans body) from Google Fonts
+- Editorial light theme — warm cream background `#F2EFE8`, deep-sage accent `#3F4F2E`
+- Two-row scrolling marquee of capabilities
+- Numbered capability sections (01–04)
+- Featured work cards with cursor-following gradient
+- Editorial experience timeline
+- Big italic name signature in the footer
 - Respects `prefers-reduced-motion`
 - SEO meta tags + inline SVG favicon
+- WAI-friendly focus styles and `rel="noopener noreferrer"` on external links
 
 ## Run locally
 
@@ -38,7 +37,13 @@ Then visit `http://localhost:8080`.
 1. Push this repo to GitHub.
 2. Repository → **Settings → Pages**.
 3. Source: **Deploy from a branch**, Branch: `main` / root.
-4. Wait ~1 minute, your site will be live at `https://<user>.github.io/<repo>/`.
+4. Wait ~1 minute. Your site will be live at `https://<user>.github.io/<repo>/`.
+
+## Customising
+
+- **Photo**: replace the `MB` block in the About section's `.about-photo` with an `<img src="photo.jpg" alt="Mohamed Bashir" />` — the round 4:5 frame already exists in CSS.
+- **Accent color**: change `--accent` in `:root` (default deep sage `#3F4F2E`).
+- **Copy / projects**: all content lives inside `index.html` — no JSON or build config to chase.
 
 ## Contact
 
