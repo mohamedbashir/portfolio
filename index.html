@@ -399,8 +399,33 @@ section { padding: 130px 0; position: relative; }
   position: absolute;
   top: 24px; right: 28px;
   font-size: 1.6rem;
-  color: var(--text);
+  color: var(--bg);
   font-style: normal;
+  z-index: 2;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+.about-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+.about-photo .about-photo-tag {
+  position: absolute;
+  left: 24px; bottom: 22px;
+  z-index: 2;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: var(--bg);
+  font-size: 1rem;
+  background: rgba(22,22,22,0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 6px 14px;
+  border-radius: 100px;
+  letter-spacing: 0.02em;
 }
 .about-body h2 { margin-bottom: 32px; max-width: 22ch; }
 .about-body p {
@@ -1124,7 +1149,10 @@ a:focus-visible, button:focus-visible {
       <span class="section-label">Who I am</span>
     </div>
     <div class="about-grid">
-      <div class="about-photo reveal">MB</div>
+      <div class="about-photo reveal">
+        <img src="photo.jpg" alt="Portrait of Mohamed Bashir" loading="lazy" decoding="async" />
+        <span class="about-photo-tag">Cairo, 2026</span>
+      </div>
       <div class="about-body reveal">
         <h2 class="section-title">A backend engineer who quietly <em>keeps the lights on.</em></h2>
         <p>I'm Mohamed, a backend developer based in Cairo with four years building real production systems for transportation, government, and finance. I care about the boring parts — clean APIs, sensible data models, observability — because that's what lets teams move fast without breaking things in the dark.</p>
