@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Mohamed Bashir — Backend Developer</title>
 <meta name="description" content="Mohamed Bashir — Backend Developer building scalable .NET Core systems and microservices across transportation, government, and finance. ASP.NET Core, EF Core, SQL Server, Docker, Azure / AWS." />
-<meta name="theme-color" content="#f4f3f6" />
+<meta name="theme-color" content="#F2EFE8" />
 <meta name="color-scheme" content="light" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Mohamed Bashir — Backend Developer" />
@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Mohamed Bashir — Backend Developer" />
 <meta name="twitter:description" content="Backend Developer · ASP.NET Core · Microservices · Cloud." />
-<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0%25" stop-color="%23562abd"/><stop offset="100%25" stop-color="%23210c6e"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="url(%23g)"/><text x="50%25" y="56%25" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, serif" font-style="italic" font-weight="500" font-size="32" fill="%236ed5a6">m</text></svg>' />
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%23161616"/><text x="50%25" y="56%25" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, serif" font-style="italic" font-weight="500" font-size="32" fill="%23F2EFE8">m</text></svg>' />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,22 +22,14 @@
 /* ============== RESET ============== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --white: white;
-  --black: #100f0d;
-  --tertiary: #6ed5a6;
-  --secondary: #210c6e;
-  --primary: #562abd;
-  --background: #f4f3f6;
-
-  /* internal semantic aliases — mapped to the tokens above */
-  --bg: var(--background);
-  --bg-2: #e8e6ec;
-  --card: var(--white);
-  --text: var(--black);
-  --muted: #6b6878;
-  --accent: var(--primary);
-  --accent-warm: var(--tertiary);
-  --border: rgba(16,15,13,0.10);
+  --bg: #F2EFE8;
+  --bg-2: #EAE5DC;
+  --card: #F8F6F1;
+  --text: #161616;
+  --muted: #6B6661;
+  --accent: #3F4F2E;
+  --accent-warm: #A8431E;
+  --border: rgba(22,22,22,0.10);
 }
 html { scroll-behavior: smooth; }
 body {
@@ -94,7 +86,7 @@ img { max-width: 100%; display: block; }
 .logo-dot {
   width: 22px; height: 22px;
   border-radius: 50%;
-  background: var(--secondary);
+  background: var(--text);
   display: inline-block;
   position: relative;
 }
@@ -103,7 +95,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--tertiary);
+  background: var(--accent);
   top: 4px; right: 4px;
 }
 .nav-links {
@@ -153,14 +145,14 @@ img { max-width: 100%; display: block; }
 }
 .availability::before {
   content: ''; width: 8px; height: 8px;
-  background: var(--tertiary);
+  background: var(--accent);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(110,213,166,0.25);
+  box-shadow: 0 0 0 4px rgba(63,82,46,0.15);
   animation: pulse 2.4s infinite;
 }
 @keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 4px rgba(110,213,166,0.25); }
-  50% { box-shadow: 0 0 0 8px rgba(110,213,166,0); }
+  0%, 100% { box-shadow: 0 0 0 4px rgba(63,82,46,0.15); }
+  50% { box-shadow: 0 0 0 8px rgba(63,82,46,0); }
 }
 .hero h1 {
   font-size: clamp(2.6rem, 6.8vw, 6rem);
@@ -174,7 +166,7 @@ img { max-width: 100%; display: block; }
 }
 .hero h1 .star {
   display: inline-block;
-  color: var(--tertiary);
+  color: var(--accent);
   font-style: normal;
   font-size: 0.55em;
   vertical-align: super;
@@ -234,7 +226,7 @@ img { max-width: 100%; display: block; }
 }
 .marquee-item::after {
   content: '✦';
-  color: var(--tertiary);
+  color: var(--accent);
   font-style: normal;
   font-size: 0.7em;
 }
@@ -253,7 +245,7 @@ section { padding: 130px 0; position: relative; }
 }
 .section-label::before {
   content: '✦ ';
-  color: var(--tertiary);
+  color: var(--accent);
 }
 .section-title {
   font-size: clamp(2.2rem, 5vw, 4rem);
@@ -390,15 +382,15 @@ section { padding: 130px 0; position: relative; }
 .about-photo {
   aspect-ratio: 1 / 1.15;
   background:
-    radial-gradient(circle at 30% 20%, rgba(110,213,166,0.35), transparent 60%),
-    linear-gradient(135deg, var(--primary), var(--secondary));
+    radial-gradient(circle at 30% 20%, rgba(168,67,30,0.25), transparent 60%),
+    linear-gradient(135deg, #DDD5C5, #C8BFAC);
   border-radius: 24px;
   display: flex; align-items: flex-end;
   padding: 30px;
   font-family: 'Fraunces', serif;
   font-size: clamp(3rem, 6vw, 5rem);
   font-style: italic;
-  color: var(--white);
+  color: var(--accent);
   position: relative;
   overflow: hidden;
 }
@@ -407,7 +399,7 @@ section { padding: 130px 0; position: relative; }
   position: absolute;
   top: 24px; right: 28px;
   font-size: 1.6rem;
-  color: var(--tertiary);
+  color: var(--text);
   font-style: normal;
 }
 .about-body h2 { margin-bottom: 32px; max-width: 22ch; }
@@ -586,7 +578,7 @@ section { padding: 130px 0; position: relative; }
 
 /* ============== FOOTER ============== */
 footer {
-  background: linear-gradient(180deg, var(--black) 0%, var(--secondary) 100%);
+  background: var(--text);
   color: var(--bg);
   padding: 100px 0 40px;
   position: relative;
@@ -641,7 +633,7 @@ footer {
   display: flex; align-items: baseline; flex-wrap: wrap;
   gap: 0.05em;
 }
-.footer-name .dot { color: var(--tertiary); }
+.footer-name .dot { color: var(--accent); }
 .footer-cred {
   padding-top: 30px;
   border-top: 1px solid rgba(242,239,232,0.12);
