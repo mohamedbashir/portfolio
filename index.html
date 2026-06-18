@@ -595,6 +595,44 @@ section { padding: 130px 0; position: relative; }
   }
   .exp-duration { text-align: left; }
 }
+.exp-projects { margin-top: 16px; }
+.exp-projects-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.exp-proj-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.exp-proj-list li {
+  position: relative;
+  padding-left: 18px;
+}
+.exp-proj-list li::before {
+  content: '▪';
+  color: var(--accent);
+  position: absolute;
+  left: 0; top: 1px;
+}
+.exp-proj-list .kp-name {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-size: 0.98rem;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.exp-proj-list .kp-gov {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
 
 /* ============== EDUCATION ============== */
 .edu-grid {
@@ -1336,11 +1374,19 @@ a:focus-visible, button:focus-visible {
       <div class="exp-row reveal">
         <div class="exp-period">Nov 2025 — Present<br>Cairo, Egypt</div>
         <div>
-          <div class="exp-title">Backend Developer</div>
+          <div class="exp-title">Senior Software Engineer (.NET)</div>
           <div class="exp-company">The Egyptian Credit Bureau · i-Score</div>
           <p class="exp-desc">Engineering scalable backend services and microservices for enterprise credit information systems. Secure, cloud-deployed .NET solutions integrated with Angular frontends.</p>
           <div class="exp-tags">
             <span class="exp-tag">ASP.NET Core</span><span class="exp-tag">Microservices</span><span class="exp-tag">SQL Server</span><span class="exp-tag">Oracle</span><span class="exp-tag">JWT / OAuth</span><span class="exp-tag">Docker</span><span class="exp-tag">Azure / AWS</span>
+          </div>
+          <div class="exp-projects">
+            <span class="exp-projects-label">Key Projects</span>
+            <ul class="exp-proj-list">
+              <li><span class="kp-name">DVS (Data Verification Services)</span><span class="kp-gov">Government Integration: Administrative Control Authority</span></li>
+              <li><span class="kp-name">NID (National ID Services)</span><span class="kp-gov">Government Integration: Ministry of Interior</span></li>
+              <li><span class="kp-name">PPO (Public Prosecution Services)</span><span class="kp-gov">Government Integration: Public Prosecution Office</span></li>
+            </ul>
           </div>
         </div>
         <div class="exp-duration">Current</div>

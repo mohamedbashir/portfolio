@@ -350,6 +350,46 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.55;
 }
 
+/* ============== KEY PROJECTS (concise) ============== */
+.xp-projects { margin-top: 12px; }
+.xp-projects-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.xp-proj-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.xp-proj-list li {
+  position: relative;
+  padding-left: 16px;
+}
+.xp-proj-list li::before {
+  content: '▪';
+  color: var(--accent);
+  position: absolute;
+  left: 0; top: 1px;
+  font-size: 0.78em;
+}
+.kp-name {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  display: block;
+}
+.kp-gov {
+  font-size: 0.82rem;
+  color: var(--muted);
+  display: block;
+}
+
 /* ============== RIGHT COLUMN ============== */
 .skills-group { margin-bottom: 14px; }
 .skills-group:last-child { margin-bottom: 0; }
@@ -475,6 +515,11 @@ a { color: inherit; text-decoration: none; }
   .proj-title { font-size: 10pt; }
   .proj-desc { font-size: 9pt; }
   .proj-stack { font-size: 8.5pt; }
+  .xp-projects { margin-top: 8px; }
+  .xp-projects-label { font-size: 7.5pt; margin-bottom: 4px; }
+  .xp-proj-list { gap: 4px; }
+  .kp-name { font-size: 9.5pt; }
+  .kp-gov { font-size: 8.5pt; }
   .skills-list, .edu-degree, .lang-row, .edu-school, .edu-meta, .edu-note { font-size: 9.5pt; }
   .skills-label { font-size: 9pt; }
   .cv-footer { font-size: 8.5pt; margin-top: 18px; }
@@ -533,17 +578,26 @@ a { color: inherit; text-decoration: none; }
 
         <article class="xp-item">
           <div class="xp-row">
-            <div class="xp-title">Backend Developer</div>
+            <div class="xp-title">Senior Software Engineer (.NET)</div>
             <div class="xp-period">Nov 2025 — Present</div>
           </div>
           <div class="xp-company">The Egyptian Credit Bureau · i-Score <span class="loc">Cairo, Egypt</span></div>
           <ul class="xp-bullets">
-            <li>Engineering scalable backend services and microservices for enterprise credit information systems.</li>
-            <li>Building secure, cloud-deployed .NET solutions integrated with Angular frontends.</li>
-            <li>Implementing JWT / OAuth flows and hardening data access against Oracle and SQL Server backends.</li>
+            <li>Design and develop secure backend services and REST APIs in ASP.NET Core for enterprise verification and credit-information platforms consumed by banks and financial institutions.</li>
+            <li>Build and maintain secure government and enterprise integrations for identity verification and information inquiry, enabling reliable secure data exchange between systems.</li>
+            <li>Implement JWT / OAuth authentication, authorization, logging, and monitoring; tune data access and performance across SQL Server and Oracle.</li>
+            <li>Contribute across the full SDLC — analysis, solution design, development, testing, deployment, and production support.</li>
           </ul>
           <div class="xp-tags">
-            <span class="xp-tag">ASP.NET Core</span><span class="xp-tag">Microservices</span><span class="xp-tag">SQL Server</span><span class="xp-tag">Oracle</span><span class="xp-tag">JWT / OAuth</span><span class="xp-tag">Docker</span><span class="xp-tag">Azure / AWS</span>
+            <span class="xp-tag">ASP.NET Core</span><span class="xp-tag">Enterprise Integrations</span><span class="xp-tag">SQL Server</span><span class="xp-tag">Oracle</span><span class="xp-tag">JWT / OAuth</span><span class="xp-tag">EF Core</span><span class="xp-tag">REST APIs</span>
+          </div>
+          <div class="xp-projects">
+            <div class="xp-projects-label">Key Projects</div>
+            <ul class="xp-proj-list">
+              <li><span class="kp-name">DVS (Data Verification Services)</span><span class="kp-gov">Government Integration: Administrative Control Authority</span></li>
+              <li><span class="kp-name">NID (National ID Services)</span><span class="kp-gov">Government Integration: Ministry of Interior</span></li>
+              <li><span class="kp-name">PPO (Public Prosecution Services)</span><span class="kp-gov">Government Integration: Public Prosecution Office</span></li>
+            </ul>
           </div>
         </article>
 
