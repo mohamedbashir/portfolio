@@ -1,791 +1,1138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mohamed Bashir — CV / Resume</title>
-<meta name="description" content="Curriculum Vitae of Mohamed Bashir — Backend Developer with 5 years of C# / .NET: government and financial integrations at iScore and real-time transportation systems at TransIT." />
-<meta name="theme-color" content="#F2EFE8" />
-<meta name="color-scheme" content="light dark" />
-<meta name="robots" content="index, follow" />
-<script>
-  (function(){
-    try {
-      var saved = localStorage.getItem('theme');
-      var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
-      var m = document.querySelector('meta[name="theme-color"]');
-      if (m) m.setAttribute('content', theme === 'dark' ? '#14120F' : '#F2EFE8');
-    } catch(e) {}
-  })();
-</script>
-<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%23161616"/><text x="50%25" y="56%25" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, serif" font-style="italic" font-weight="500" font-size="32" fill="%23F2EFE8">m</text></svg>' />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-/* ============== RESET ============== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --bg: #F2EFE8;
-  --bg-2: #EAE5DC;
-  --card: #F8F6F1;
-  --paper: #FFFDF8;
-  --text: #161616;
-  --muted: #6B6661;
-  --accent: #3F4F2E;
-  --accent-warm: #A8431E;
-  --border: rgba(22,22,22,0.10);
-  --border-strong: rgba(22,22,22,0.20);
-  --shadow-color: rgba(22,22,22,0.22);
-  --shadow-color-2: rgba(22,22,22,0.06);
-  color-scheme: light;
-}
-[data-theme="dark"] {
-  --bg: #14120F;
-  --bg-2: #1B1815;
-  --card: #1F1C18;
-  --paper: #1C1915;
-  --text: #EFEBE2;
-  --muted: #948C82;
-  --accent: #95B96E;
-  --accent-warm: #E0855F;
-  --border: rgba(239,235,226,0.10);
-  --border-strong: rgba(239,235,226,0.22);
-  --shadow-color: rgba(0,0,0,0.55);
-  --shadow-color-2: rgba(0,0,0,0.30);
-  color-scheme: dark;
-}
-html { transition: background-color 0.35s ease, color 0.35s ease; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  font-size: 15px;
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
-  padding: 50px 24px;
-}
-h1, h2, h3, h4 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-a { color: inherit; text-decoration: none; }
-::selection { background: var(--accent); color: var(--bg); }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Bashir — CV / Resume</title>
+  <meta name="description"
+    content="Curriculum Vitae of Mohamed Bashir — Backend Developer with 5 years of C# / .NET: government and financial integrations at iScore and real-time transportation systems at TransIT." />
+  <meta name="theme-color" content="#F2EFE8" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="robots" content="index, follow" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        var m = document.querySelector('meta[name="theme-color"]');
+        if (m) m.setAttribute('content', theme === 'dark' ? '#14120F' : '#F2EFE8');
+      } catch (e) { }
+    })();
+  </script>
+  <link rel="icon" type="image/svg+xml"
+    href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%23161616"/><text x="50%25" y="56%25" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, serif" font-style="italic" font-weight="500" font-size="32" fill="%23F2EFE8">m</text></svg>' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ============== RESET ============== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* ============== TOOLBAR (screen only) ============== */
-.toolbar {
-  max-width: 880px;
-  margin: 0 auto 18px;
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-.toolbar a, .toolbar button {
-  display: inline-flex; align-items: center; gap: 9px;
-  padding: 11px 18px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 500;
-  border-radius: 100px;
-  border: 1px solid var(--border-strong);
-  background: var(--card);
-  color: var(--text);
-  cursor: pointer;
-  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
-}
-.toolbar a:hover, .toolbar button:hover {
-  background: var(--text);
-  color: var(--bg);
-  border-color: var(--text);
-  transform: translateY(-1px);
-}
-.toolbar a.primary, .toolbar button.primary {
-  background: var(--text);
-  color: var(--bg);
-  border-color: var(--text);
-}
-.toolbar a.primary:hover, .toolbar button.primary:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-}
-.toolbar .back::before { content: '←'; }
-.toolbar .pdf::before { content: '↓'; }
-.toolbar-right {
-  display: inline-flex; align-items: center; gap: 10px;
-}
-.theme-toggle {
-  width: 40px; height: 40px;
-  display: inline-flex; align-items: center; justify-content: center;
-  background: var(--card);
-  border: 1px solid var(--border-strong);
-  color: var(--text);
-  border-radius: 50%;
-  cursor: pointer;
-  padding: 0;
-  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
-}
-.theme-toggle:hover {
-  background: var(--text);
-  color: var(--bg);
-  border-color: var(--text);
-  transform: translateY(-1px);
-}
-.theme-toggle svg { width: 17px; height: 17px; }
-.theme-toggle .icon-sun { display: none; }
-.theme-toggle .icon-moon { display: inline-block; }
-[data-theme="dark"] .theme-toggle .icon-sun { display: inline-block; }
-[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    :root {
+      --bg: #F2EFE8;
+      --bg-2: #EAE5DC;
+      --card: #F8F6F1;
+      --paper: #FFFDF8;
+      --text: #161616;
+      --muted: #6B6661;
+      --accent: #3F4F2E;
+      --accent-warm: #A8431E;
+      --border: rgba(22, 22, 22, 0.10);
+      --border-strong: rgba(22, 22, 22, 0.20);
+      --shadow-color: rgba(22, 22, 22, 0.22);
+      --shadow-color-2: rgba(22, 22, 22, 0.06);
+      color-scheme: light;
+    }
 
-/* ============== PAPER / CV CARD ============== */
-.paper {
-  max-width: 880px;
-  margin: 0 auto;
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  box-shadow:
-    0 30px 80px -30px var(--shadow-color),
-    0 6px 18px -4px var(--shadow-color-2);
-  overflow: hidden;
-  padding: 56px 60px;
-  transition: background 0.35s ease, border-color 0.35s ease;
-}
-@media (max-width: 720px) {
-  body { padding: 24px 14px; }
-  .paper { padding: 36px 26px; border-radius: 14px; }
-}
+    [data-theme="dark"] {
+      --bg: #14120F;
+      --bg-2: #1B1815;
+      --card: #1F1C18;
+      --paper: #1C1915;
+      --text: #EFEBE2;
+      --muted: #948C82;
+      --accent: #95B96E;
+      --accent-warm: #E0855F;
+      --border: rgba(239, 235, 226, 0.10);
+      --border-strong: rgba(239, 235, 226, 0.22);
+      --shadow-color: rgba(0, 0, 0, 0.55);
+      --shadow-color-2: rgba(0, 0, 0, 0.30);
+      color-scheme: dark;
+    }
 
-/* ============== HEADER ============== */
-.cv-header {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 30px;
-  align-items: end;
-  padding-bottom: 26px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 32px;
-}
-.cv-name {
-  font-size: clamp(2.3rem, 5vw, 3.2rem);
-  letter-spacing: -0.03em;
-}
-.cv-name em {
-  font-style: italic;
-  color: var(--accent);
-  font-weight: 500;
-}
-.cv-role {
-  margin-top: 8px;
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: 1.15rem;
-  color: var(--accent);
-}
-.cv-tagline {
-  margin-top: 14px;
-  color: var(--muted);
-  font-size: 0.95rem;
-  max-width: 58ch;
-}
-.cv-contact {
-  font-size: 0.86rem;
-  color: var(--muted);
-  text-align: right;
-  line-height: 1.85;
-}
-.cv-contact a:hover { color: var(--accent); }
-.cv-contact .label {
-  display: inline-block;
-  width: 62px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.68rem;
-  color: var(--text);
-  opacity: 0.55;
-  margin-right: 6px;
-}
-@media (max-width: 720px) {
-  .cv-header { grid-template-columns: 1fr; gap: 18px; }
-  .cv-contact { text-align: left; }
-}
+    html {
+      transition: background-color 0.35s ease, color 0.35s ease;
+    }
 
-/* ============== LAYOUT ============== */
-.cv-body {
-  display: grid;
-  grid-template-columns: 1.8fr 1fr;
-  gap: 44px;
-}
-@media (max-width: 720px) {
-  .cv-body { grid-template-columns: 1fr; gap: 28px; }
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* ============== SECTION HEADINGS ============== */
-.cv-section { margin-bottom: 30px; }
-.cv-section:last-child { margin-bottom: 0; }
-.cv-section-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  font-weight: 600;
-  color: var(--muted);
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
-  position: relative;
-}
-.cv-section-title::before {
-  content: '✦';
-  color: var(--accent);
-  margin-right: 8px;
-  letter-spacing: 0;
-}
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      padding: 50px 24px;
+    }
 
-/* ============== PROFILE / SUMMARY ============== */
-.profile p {
-  font-size: 0.97rem;
-  color: var(--text);
-  line-height: 1.65;
-}
-.profile p + p { margin-top: 10px; color: var(--muted); }
-.profile strong { font-weight: 600; color: var(--text); }
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
 
-/* ============== EXPERIENCE ============== */
-.xp-item { margin-bottom: 22px; page-break-inside: avoid; }
-.xp-item:last-child { margin-bottom: 0; }
-.xp-row {
-  display: flex; align-items: baseline; justify-content: space-between;
-  gap: 16px; flex-wrap: wrap;
-}
-.xp-title {
-  font-family: 'Fraunces', serif;
-  font-size: 1.15rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-.xp-period {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  color: var(--muted);
-  font-size: 0.88rem;
-  white-space: nowrap;
-}
-.xp-company {
-  color: var(--accent);
-  font-size: 0.92rem;
-  margin-top: 2px;
-  display: flex; gap: 8px; align-items: baseline;
-  flex-wrap: wrap;
-}
-.xp-company .loc {
-  color: var(--muted);
-  font-style: italic;
-  font-family: 'Fraunces', serif;
-  font-size: 0.86rem;
-}
-.xp-company .loc::before { content: '· '; }
-.xp-bullets {
-  margin: 10px 0 0 0;
-  padding-left: 18px;
-  list-style: none;
-}
-.xp-bullets li {
-  position: relative;
-  padding-left: 4px;
-  font-size: 0.92rem;
-  color: var(--text);
-  line-height: 1.55;
-  margin-bottom: 5px;
-}
-.xp-bullets li::before {
-  content: '—';
-  color: var(--accent);
-  position: absolute;
-  left: -18px;
-  top: 0;
-}
-.xp-tags {
-  display: flex; flex-wrap: wrap; gap: 5px;
-  margin-top: 10px;
-}
-.xp-tag {
-  font-size: 0.7rem;
-  padding: 3px 10px;
-  border-radius: 100px;
-  background: var(--bg-2);
-  color: var(--muted);
-  letter-spacing: 0.02em;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-/* ============== PROJECTS ============== */
-.proj-item {
-  margin-bottom: 16px;
-  page-break-inside: avoid;
-}
-.proj-item:last-child { margin-bottom: 0; }
-.proj-row {
-  display: flex; align-items: baseline; justify-content: space-between;
-  gap: 12px; flex-wrap: wrap;
-}
-.proj-title {
-  font-family: 'Fraunces', serif;
-  font-weight: 500;
-  font-size: 1rem;
-  letter-spacing: -0.01em;
-}
-.proj-title a {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  text-underline-offset: 3px;
-}
-.proj-item .xp-bullets { margin-top: 4px; }
-.proj-item .xp-bullets li { font-size: 0.88rem; color: var(--muted); }
-.proj-stack {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: 0.82rem;
-  color: var(--accent);
-}
-.proj-desc {
-  color: var(--muted);
-  font-size: 0.88rem;
-  margin-top: 4px;
-  line-height: 1.55;
-}
+    ::selection {
+      background: var(--accent);
+      color: var(--bg);
+    }
 
-/* ============== KEY PROJECTS (concise) ============== */
-.xp-projects { margin-top: 12px; }
-.xp-projects-label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-weight: 600;
-  color: var(--muted);
-  margin-bottom: 8px;
-}
-.xp-proj-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-.xp-proj-list li {
-  position: relative;
-  padding-left: 16px;
-}
-.xp-proj-list li::before {
-  content: '▪';
-  color: var(--accent);
-  position: absolute;
-  left: 0; top: 1px;
-  font-size: 0.78em;
-}
-.kp-name {
-  font-family: 'Fraunces', serif;
-  font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: -0.01em;
-  display: block;
-}
-.kp-gov {
-  font-size: 0.82rem;
-  color: var(--muted);
-  display: block;
-}
+    /* ============== TOOLBAR (screen only) ============== */
+    .toolbar {
+      max-width: 880px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
 
-/* ============== RIGHT COLUMN ============== */
-.skills-group { margin-bottom: 14px; }
-.skills-group:last-child { margin-bottom: 0; }
-.skills-label {
-  font-size: 0.76rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 6px;
-  letter-spacing: 0.02em;
-}
-.skills-list {
-  font-size: 0.88rem;
-  color: var(--muted);
-  line-height: 1.6;
-}
+    .toolbar a,
+    .toolbar button {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 11px 18px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      border-radius: 100px;
+      border: 1px solid var(--border-strong);
+      background: var(--card);
+      color: var(--text);
+      cursor: pointer;
+      transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+    }
 
-.edu-item { margin-bottom: 14px; page-break-inside: avoid; }
-.edu-item:last-child { margin-bottom: 0; }
-.edu-degree {
-  font-family: 'Fraunces', serif;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-.edu-school {
-  color: var(--accent);
-  font-size: 0.88rem;
-  margin-top: 2px;
-}
-.edu-meta {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: 0.82rem;
-  color: var(--muted);
-  margin-top: 3px;
-}
-.edu-note {
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin-top: 6px;
-  line-height: 1.5;
-}
-.edu-note strong { color: var(--text); font-weight: 500; }
+    .toolbar a:hover,
+    .toolbar button:hover {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+      transform: translateY(-1px);
+    }
 
-.lang-row {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding: 7px 0;
-  border-bottom: 1px dashed var(--border);
-  font-size: 0.9rem;
-}
-.lang-row:last-child { border-bottom: none; }
-.lang-row .lvl {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  color: var(--accent);
-}
+    .toolbar a.primary,
+    .toolbar button.primary {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
 
-/* ============== FOOTER ============== */
-.cv-footer {
-  margin-top: 38px;
-  padding-top: 18px;
-  border-top: 1px solid var(--border);
-  display: flex; justify-content: space-between; align-items: baseline;
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: 0.82rem;
-  color: var(--muted);
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.cv-footer a:hover { color: var(--accent); }
+    .toolbar a.primary:hover,
+    .toolbar button.primary:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
 
-/* ============== PRINT / PDF ============== */
-@page {
-  size: A4;
-  margin: 12mm 14mm;
-}
-@media print {
-  /* Always print as light, no matter what theme the user picked */
-  :root, [data-theme="dark"] {
-    --bg: #F2EFE8;
-    --bg-2: #EAE5DC;
-    --card: #F8F6F1;
-    --paper: #FFFFFF;
-    --text: #161616;
-    --muted: #6B6661;
-    --accent: #3F4F2E;
-    --accent-warm: #A8431E;
-    --border: rgba(22,22,22,0.10);
-    --border-strong: rgba(22,22,22,0.20);
-    color-scheme: light;
-  }
-  body {
-    background: #fff !important;
-    color: #161616 !important;
-    padding: 0 !important;
-    font-size: 10.5pt;
-    line-height: 1.45;
-  }
-  .toolbar { display: none !important; }
-  .paper {
-    box-shadow: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    max-width: 100% !important;
-    background: #fff !important;
-  }
-  .cv-header { margin-bottom: 18px; padding-bottom: 14px; }
-  .cv-name { font-size: 26pt; }
-  .cv-role { font-size: 11pt; }
-  .cv-tagline { font-size: 9.5pt; }
-  .cv-contact { font-size: 9pt; }
-  .cv-section { margin-bottom: 14px; }
-  .cv-section-title { font-size: 8pt; margin-bottom: 8px; padding-bottom: 4px; }
-  .xp-item { margin-bottom: 12px; }
-  .xp-title { font-size: 11pt; }
-  .xp-company { font-size: 9.5pt; }
-  .xp-period { font-size: 9pt; }
-  .xp-bullets li { font-size: 9.5pt; margin-bottom: 2px; }
-  .xp-tag { font-size: 7.5pt; padding: 2px 7px; background: #EFEDE5; }
-  .proj-item { margin-bottom: 9px; }
-  .proj-title { font-size: 10pt; }
-  .proj-desc { font-size: 9pt; }
-  .proj-stack { font-size: 8.5pt; }
-  .xp-projects { margin-top: 8px; }
-  .xp-projects-label { font-size: 7.5pt; margin-bottom: 4px; }
-  .xp-proj-list { gap: 4px; }
-  .kp-name { font-size: 9.5pt; }
-  .kp-gov { font-size: 8.5pt; }
-  .skills-list, .edu-degree, .lang-row, .edu-school, .edu-meta, .edu-note { font-size: 9.5pt; }
-  .skills-label { font-size: 9pt; }
-  .cv-footer { font-size: 8.5pt; margin-top: 18px; }
-  a { color: inherit !important; text-decoration: none !important; }
-}
-</style>
+    .toolbar .back::before {
+      content: '←';
+    }
+
+    .toolbar .pdf::before {
+      content: '↓';
+    }
+
+    .toolbar-right {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .theme-toggle {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--card);
+      border: 1px solid var(--border-strong);
+      color: var(--text);
+      border-radius: 50%;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .theme-toggle:hover {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .theme-toggle svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    .theme-toggle .icon-sun {
+      display: none;
+    }
+
+    .theme-toggle .icon-moon {
+      display: inline-block;
+    }
+
+    [data-theme="dark"] .theme-toggle .icon-sun {
+      display: inline-block;
+    }
+
+    [data-theme="dark"] .theme-toggle .icon-moon {
+      display: none;
+    }
+
+    /* ============== PAPER / CV CARD ============== */
+    .paper {
+      max-width: 880px;
+      margin: 0 auto;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow:
+        0 30px 80px -30px var(--shadow-color),
+        0 6px 18px -4px var(--shadow-color-2);
+      overflow: hidden;
+      padding: 56px 60px;
+      transition: background 0.35s ease, border-color 0.35s ease;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 24px 14px;
+      }
+
+      .paper {
+        padding: 36px 26px;
+        border-radius: 14px;
+      }
+    }
+
+    /* ============== HEADER ============== */
+    .cv-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: end;
+      padding-bottom: 26px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+
+    .cv-name {
+      font-size: clamp(2.3rem, 5vw, 3.2rem);
+      letter-spacing: -0.03em;
+    }
+
+    .cv-name em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .cv-role {
+      margin-top: 8px;
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--accent);
+    }
+
+    .cv-tagline {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 58ch;
+    }
+
+    .cv-contact {
+      font-size: 0.86rem;
+      color: var(--muted);
+      text-align: right;
+      line-height: 1.85;
+    }
+
+    .cv-contact a:hover {
+      color: var(--accent);
+    }
+
+    .cv-contact .label {
+      display: inline-block;
+      width: 62px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.68rem;
+      color: var(--text);
+      opacity: 0.55;
+      margin-right: 6px;
+    }
+
+    @media (max-width: 720px) {
+      .cv-header {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .cv-contact {
+        text-align: left;
+      }
+    }
+
+    /* ============== LAYOUT ============== */
+    .cv-body {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr;
+      gap: 44px;
+    }
+
+    @media (max-width: 720px) {
+      .cv-body {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+
+    /* ============== SECTION HEADINGS ============== */
+    .cv-section {
+      margin-bottom: 30px;
+    }
+
+    .cv-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-section-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .cv-section-title::before {
+      content: '✦';
+      color: var(--accent);
+      margin-right: 8px;
+      letter-spacing: 0;
+    }
+
+    /* ============== PROFILE / SUMMARY ============== */
+    .profile p {
+      font-size: 0.97rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .profile p+p {
+      margin-top: 10px;
+      color: var(--muted);
+    }
+
+    .profile strong {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* ============== EXPERIENCE ============== */
+    .xp-item {
+      margin-bottom: 22px;
+      page-break-inside: avoid;
+    }
+
+    .xp-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .xp-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .xp-title {
+      font-family: 'Fraunces', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .xp-period {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.88rem;
+      white-space: nowrap;
+    }
+
+    .xp-company {
+      color: var(--accent);
+      font-size: 0.92rem;
+      margin-top: 2px;
+      display: flex;
+      gap: 8px;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .xp-company .loc {
+      color: var(--muted);
+      font-style: italic;
+      font-family: 'Fraunces', serif;
+      font-size: 0.86rem;
+    }
+
+    .xp-company .loc::before {
+      content: '· ';
+    }
+
+    .xp-bullets {
+      margin: 10px 0 0 0;
+      padding-left: 18px;
+      list-style: none;
+    }
+
+    .xp-bullets li {
+      position: relative;
+      padding-left: 4px;
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.55;
+      margin-bottom: 5px;
+    }
+
+    .xp-bullets li::before {
+      content: '—';
+      color: var(--accent);
+      position: absolute;
+      left: -18px;
+      top: 0;
+    }
+
+    .xp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 10px;
+    }
+
+    .xp-tag {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: var(--bg-2);
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    /* ============== PROJECTS ============== */
+    .proj-item {
+      margin-bottom: 16px;
+      page-break-inside: avoid;
+    }
+
+    .proj-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .proj-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .proj-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .proj-title a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      text-underline-offset: 3px;
+    }
+
+    .proj-item .xp-bullets {
+      margin-top: 4px;
+    }
+
+    .proj-item .xp-bullets li {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .proj-stack {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.82rem;
+      color: var(--accent);
+    }
+
+    .proj-desc {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-top: 4px;
+      line-height: 1.55;
+    }
+
+    /* ============== KEY PROJECTS (concise) ============== */
+    .xp-projects {
+      margin-top: 12px;
+    }
+
+    .xp-projects-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .xp-proj-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .xp-proj-list li {
+      position: relative;
+      padding-left: 16px;
+    }
+
+    .xp-proj-list li::before {
+      content: '▪';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      top: 1px;
+      font-size: 0.78em;
+    }
+
+    .kp-name {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: -0.01em;
+      display: block;
+    }
+
+    .kp-gov {
+      font-size: 0.82rem;
+      color: var(--muted);
+      display: block;
+    }
+
+    /* ============== RIGHT COLUMN ============== */
+    .skills-group {
+      margin-bottom: 14px;
+    }
+
+    .skills-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .skills-label {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+
+    .skills-list {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .edu-item {
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+
+    .edu-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-degree {
+      font-family: 'Fraunces', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .edu-school {
+      color: var(--accent);
+      font-size: 0.88rem;
+      margin-top: 2px;
+    }
+
+    .edu-meta {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .edu-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    .edu-note strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .lang-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 7px 0;
+      border-bottom: 1px dashed var(--border);
+      font-size: 0.9rem;
+    }
+
+    .lang-row:last-child {
+      border-bottom: none;
+    }
+
+    .lang-row .lvl {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    /* ============== FOOTER ============== */
+    .cv-footer {
+      margin-top: 38px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.82rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .cv-footer a:hover {
+      color: var(--accent);
+    }
+
+    /* ============== PRINT / PDF ============== */
+    @page {
+      size: A4;
+      margin: 12mm 14mm;
+    }
+
+    @media print {
+
+      /* Always print as light, no matter what theme the user picked */
+      :root,
+      [data-theme="dark"] {
+        --bg: #F2EFE8;
+        --bg-2: #EAE5DC;
+        --card: #F8F6F1;
+        --paper: #FFFFFF;
+        --text: #161616;
+        --muted: #6B6661;
+        --accent: #3F4F2E;
+        --accent-warm: #A8431E;
+        --border: rgba(22, 22, 22, 0.10);
+        --border-strong: rgba(22, 22, 22, 0.20);
+        color-scheme: light;
+      }
+
+      body {
+        background: #fff !important;
+        color: #161616 !important;
+        padding: 0 !important;
+        font-size: 10.5pt;
+        line-height: 1.45;
+      }
+
+      .toolbar {
+        display: none !important;
+      }
+
+      .paper {
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        background: #fff !important;
+      }
+
+      .cv-header {
+        margin-bottom: 18px;
+        padding-bottom: 14px;
+      }
+
+      .cv-name {
+        font-size: 26pt;
+      }
+
+      .cv-role {
+        font-size: 11pt;
+      }
+
+      .cv-tagline {
+        font-size: 9.5pt;
+      }
+
+      .cv-contact {
+        font-size: 9pt;
+      }
+
+      .cv-section {
+        margin-bottom: 14px;
+      }
+
+      .cv-section-title {
+        font-size: 8pt;
+        margin-bottom: 8px;
+        padding-bottom: 4px;
+      }
+
+      .xp-item {
+        margin-bottom: 12px;
+      }
+
+      .xp-title {
+        font-size: 11pt;
+      }
+
+      .xp-company {
+        font-size: 9.5pt;
+      }
+
+      .xp-period {
+        font-size: 9pt;
+      }
+
+      .xp-bullets li {
+        font-size: 9.5pt;
+        margin-bottom: 2px;
+      }
+
+      .xp-tag {
+        font-size: 7.5pt;
+        padding: 2px 7px;
+        background: #EFEDE5;
+      }
+
+      .proj-item {
+        margin-bottom: 9px;
+      }
+
+      .proj-title {
+        font-size: 10pt;
+      }
+
+      .proj-desc {
+        font-size: 9pt;
+      }
+
+      .proj-stack {
+        font-size: 8.5pt;
+      }
+
+      .xp-projects {
+        margin-top: 8px;
+      }
+
+      .xp-projects-label {
+        font-size: 7.5pt;
+        margin-bottom: 4px;
+      }
+
+      .xp-proj-list {
+        gap: 4px;
+      }
+
+      .kp-name {
+        font-size: 9.5pt;
+      }
+
+      .kp-gov {
+        font-size: 8.5pt;
+      }
+
+      .skills-list,
+      .edu-degree,
+      .lang-row,
+      .edu-school,
+      .edu-meta,
+      .edu-note {
+        font-size: 9.5pt;
+      }
+
+      .skills-label {
+        font-size: 9pt;
+      }
+
+      .cv-footer {
+        font-size: 8.5pt;
+        margin-top: 18px;
+      }
+
+      a {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- TOOLBAR (hidden in print) -->
-<nav class="toolbar" aria-label="Document actions">
-  <a href="index.html" class="back" aria-label="Back to portfolio">Back to portfolio</a>
-  <div class="toolbar-right">
-    <button type="button" id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-      </svg>
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="4"/>
-        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-      </svg>
-    </button>
-    <button type="button" class="primary pdf" onclick="window.print()" aria-label="Download CV as PDF">Download PDF</button>
-  </div>
-</nav>
-
-<!-- CV PAPER -->
-<article class="paper" id="cv">
-
-  <!-- HEADER -->
-  <header class="cv-header">
-    <div>
-      <h1 class="cv-name">Mohamed <em>Bashir</em></h1>
-      <div class="cv-role">Backend Developer · C# / .NET</div>
-      <p class="cv-tagline">Five years building production C# / .NET systems — integration services connecting financial institutions and government platforms with national authorities, and real-time transportation platforms for the Egyptian Ministry of Transport ecosystem.</p>
+  <!-- TOOLBAR (hidden in print) -->
+  <nav class="toolbar" aria-label="Document actions">
+    <a href="index.html" class="back" aria-label="Back to portfolio">Back to portfolio</a>
+    <div class="toolbar-right">
+      <button type="button" id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path
+            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+        </svg>
+      </button>
+      <button type="button" class="primary pdf" onclick="window.print()" aria-label="Download CV as PDF">Download
+        PDF</button>
     </div>
-    <address class="cv-contact">
-      <div><span class="label">Email</span><a href="mailto:mohamed.basher.daoud@gmail.com">mohamed.basher.daoud@gmail.com</a></div>
-      <div><span class="label">Phone</span><a href="tel:+201013066875">+20 101 306 6875</a></div>
-      <div><span class="label">Site</span><a href="index.html">mohamedbashir.dev</a></div>
-      <div><span class="label">LinkedIn</span><a href="https://linkedin.com/in/mohamed-basher" target="_blank" rel="noopener">/in/mohamed-basher</a></div>
-      <div><span class="label">GitHub</span><a href="https://github.com/mohamedbashir" target="_blank" rel="noopener">/mohamedbashir</a></div>
-      <div><span class="label">Based</span>Cairo, Egypt</div>
-    </address>
-  </header>
+  </nav>
 
-  <!-- BODY -->
-  <div class="cv-body">
+  <!-- CV PAPER -->
+  <article class="paper" id="cv">
 
-    <!-- LEFT COLUMN -->
-    <div class="cv-main">
+    <!-- HEADER -->
+    <header class="cv-header">
+      <div>
+        <h1 class="cv-name">Mohamed <em>Bashir</em></h1>
+        <div class="cv-role">Backend Developer · C# / .NET</div>
+        <p class="cv-tagline">Five years building production C# / .NET systems — integration services connecting
+          financial institutions and government platforms with national authorities, and real-time transportation
+          platforms for the Egyptian Ministry of Transport ecosystem.</p>
+      </div>
+      <address class="cv-contact">
+        <div><span class="label">Email</span><a
+            href="mailto:mohamed.basher.daoud@gmail.com">mohamed.basher.daoud@gmail.com</a></div>
+        <div><span class="label">Phone</span><a href="tel:+201013066875">+20 101 306 6875</a></div>
+        <div><span class="label">Site</span><a href="index.html">mohamedbashir.dev</a></div>
+        <div><span class="label">LinkedIn</span><a href="https://linkedin.com/in/mohamed-basher" target="_blank"
+            rel="noopener">/in/mohamed-basher</a></div>
+        <div><span class="label">GitHub</span><a href="https://github.com/mohamedbashir" target="_blank"
+            rel="noopener">/mohamedbashir</a></div>
+        <div><span class="label">Based</span>Cairo, Egypt</div>
+      </address>
+    </header>
 
-      <!-- EXPERIENCE -->
-      <section class="cv-section">
-        <h2 class="cv-section-title">Experience</h2>
+    <!-- BODY -->
+    <div class="cv-body">
 
-        <article class="xp-item">
-          <div class="xp-row">
-            <div class="xp-title">Senior Software Engineer / Backend .NET</div>
-            <div class="xp-period">Nov 2025 — Present</div>
+      <!-- LEFT COLUMN -->
+      <div class="cv-main">
+
+        <!-- EXPERIENCE -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Experience</h2>
+
+          <article class="xp-item">
+            <div class="xp-row">
+              <div class="xp-title">Senior Software Engineer / Backend .NET</div>
+              <div class="xp-period">Nov 2025 — Present</div>
+            </div>
+            <div class="xp-company">The Egyptian Credit Bureau S.A.E · iScore <span class="loc">Cairo, Egypt</span>
+            </div>
+            <ul class="xp-bullets">
+              <li><strong>Digital Egypt Platform:</strong> built the end-to-end credit score inquiry workflow —
+                receiving citizen requests from the national portal, processing them against iScore, and returning
+                results securely.</li>
+              <li><strong>NID — National ID Data Service:</strong> APIs letting banks and subscribed institutions
+                retrieve verified citizen information by National ID, integrated with the Ministry of Interior.</li>
+              <li><strong>PPO — Criminal Status Inquiry:</strong> backend services and APIs delivering criminal-status
+                information through integration with the Egyptian Public Prosecution.</li>
+              <li><strong>DVS — Document Verification Service:</strong> Administrative Control Authority integration for
+                verifying driver licenses, birth certificates, vehicle information, and water / electricity meters.</li>
+              <li><strong>GAFI:</strong> APIs for company incorporation and bank certificate registration — entity
+                models, relational design, validation rules, and retrieval by Request ID and Certificate ID.</li>
+            </ul>
+            <div class="xp-tags">
+              <span class="xp-tag">.NET 8</span><span class="xp-tag">ASP.NET Core Web API</span><span class="xp-tag">EF
+                Core</span><span class="xp-tag">SQL Server</span><span class="xp-tag">Oracle</span><span
+                class="xp-tag">REST APIs</span><span class="xp-tag">Government Integration</span>
+            </div>
+          </article>
+
+          <article class="xp-item">
+            <div class="xp-row">
+              <div class="xp-title">Backend Developer</div>
+              <div class="xp-period">Sep 2021 — Nov 2025</div>
+            </div>
+            <div class="xp-company">Transport Information Technology · TransIT <span class="loc">Nasr City, Egypt</span>
+            </div>
+            <ul class="xp-bullets">
+              <li>Transportation-sector company associated with the Egyptian Ministry of Transport — built backend
+                systems for production transportation, government, and commercial platforms (see projects below).</li>
+              <li>Real-time communication with SignalR / WebSockets, JWT authentication and authorization, payment
+                gateway and tax authority integrations, and software integration with physical gate hardware.</li>
+            </ul>
+            <div class="xp-tags">
+              <span class="xp-tag">.NET 6</span><span class="xp-tag">ASP.NET Core</span><span
+                class="xp-tag">SignalR</span><span class="xp-tag">NetTopologySuite</span><span
+                class="xp-tag">JWT</span><span class="xp-tag">SQL Server</span><span class="xp-tag">Django</span><span
+                class="xp-tag">Crystal Reports</span>
+            </div>
+          </article>
+        </section>
+
+        <!-- SELECTED PROJECTS -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">TransIT Projects</h2>
+
+          <article class="proj-item">
+            <div class="proj-row">
+              <div class="proj-title"><a
+                  href="https://play.google.com/store/apps/details?id=com.capitalTaxiApp&amp;pcampaignid=web_share"
+                  target="_blank" rel="noopener">Capital Taxi — Ride-Hailing Platform</a></div>
+              <div class="proj-stack">SignalR · WebSockets · JWT</div>
+            </div>
+            <ul class="xp-bullets">
+              <li>Real-time driver location tracking, driver availability, and zone-based driver selection.</li>
+              <li>Driver–passenger matching, full trip lifecycle (request → acceptance → tracking → completion), and
+                configurable dynamic fare pricing.</li>
+            </ul>
+          </article>
+
+          <article class="proj-item">
+            <div class="proj-row">
+              <div class="proj-title">Baghdadi Toll Station — Toll &amp; Gate Management</div>
+              <div class="proj-stack">Roads &amp; Bridges Authority</div>
+            </div>
+            <ul class="xp-bullets">
+              <li>Developed backend functionality supporting vehicle subscription and toll collection workflows.</li>
+              <li>Implemented integration with vehicle tag readers and gate barriers to support vehicle identification
+                and gate access.</li>
+              <li>Built the collection workflow for vehicle selection, fee calculation, ticket generation, and payment
+                processing.</li>
+              <li>Integrated Epson printers for printing transaction receipts.</li>
+            </ul>
+          </article>
+
+          <article class="proj-item">
+            <div class="proj-row">
+              <div class="proj-title"><a href="https://abelatrains.com/#/" target="_blank" rel="noopener">Abela —
+                  Sleeping Train Reservations</a></div>
+              <div class="proj-stack">Django · .NET · Crystal Reports</div>
+            </div>
+            <ul class="xp-bullets">
+              <li>Django backend for cabin reservations and booking; Egyptian Tax Authority (ETA) integration in .NET;
+                National Bank of Egypt payment gateway.</li>
+              <li>Separate reporting system with ASP.NET Web Forms and Crystal Reports.</li>
+            </ul>
+          </article>
+
+          <article class="proj-item">
+            <div class="proj-row">
+              <div class="proj-title">BRT — Bus Rapid Transit</div>
+              <div class="proj-stack">ASP.NET Core · SQL Server</div>
+            </div>
+            <ul class="xp-bullets">
+              <li>Trip booking, ticket purchase, pre-boarding ticket validation, and multi-station / multi-route logic.
+              </li>
+            </ul>
+          </article>
+
+          <article class="proj-item">
+            <div class="proj-row">
+              <div class="proj-title">Advertising Permits Management System</div>
+              <div class="proj-stack">Roads &amp; Bridges Authority</div>
+            </div>
+            <ul class="xp-bullets">
+              <li>Permit approval and renewal workflows with pricing by location / zone and advertisement type.</li>
+            </ul>
+          </article>
+
+          <article class="proj-item">
+            <div class="proj-row">
+              <div class="proj-title"><a href="https://www.mot.gov.eg/Home" target="_blank" rel="noopener">Ministry of
+                  Transport Website</a></div>
+              <div class="proj-stack">ASP.NET · CMS</div>
+            </div>
+            <ul class="xp-bullets">
+              <li>Backend and admin dashboard / CMS for news and content, with a publishing workflow reflected on the
+                public site.</li>
+            </ul>
+          </article>
+        </section>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <aside class="cv-side">
+
+        <!-- PROFILE -->
+        <section class="cv-section profile">
+          <h2 class="cv-section-title">Profile</h2>
+          <p>Backend engineer with <strong>5 years</strong> of production experience in C# and .NET, across government
+            &amp; financial integrations and real-time transportation platforms.</p>
+          <p>Experienced with SQL Server, Oracle, and EF Core in production, including private and restricted networks.
+          </p>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Technical Skills</h2>
+
+          <div class="skills-group">
+            <div class="skills-label">Backend</div>
+            <div class="skills-list">C# · .NET 8 · .NET 6 · .NET Framework · ASP.NET Core Web API · ASP.NET Web API ·
+              REST APIs · Dependency Injection</div>
           </div>
-          <div class="xp-company">The Egyptian Credit Bureau S.A.E · iScore <span class="loc">Cairo, Egypt</span></div>
-          <ul class="xp-bullets">
-            <li><strong>Digital Egypt Platform:</strong> built the end-to-end credit score inquiry workflow — receiving citizen requests from the national portal, processing them against iScore, and returning results securely.</li>
-            <li><strong>NID — National ID Data Service:</strong> APIs letting banks and subscribed institutions retrieve verified citizen information by National ID, integrated with the Ministry of Interior.</li>
-            <li><strong>PPO — Criminal Status Inquiry:</strong> backend services and APIs delivering criminal-status information through integration with the Egyptian Public Prosecution.</li>
-            <li><strong>DVS — Document Verification Service:</strong> Administrative Control Authority integration for verifying driver licenses, birth certificates, vehicle information, and water / electricity meters.</li>
-            <li><strong>GAFI:</strong> APIs for company incorporation and bank certificate registration — entity models, relational design, validation rules, and retrieval by Request ID and Certificate ID.</li>
-          </ul>
-          <div class="xp-tags">
-            <span class="xp-tag">.NET 8</span><span class="xp-tag">ASP.NET Core Web API</span><span class="xp-tag">EF Core</span><span class="xp-tag">SQL Server</span><span class="xp-tag">Oracle</span><span class="xp-tag">REST APIs</span><span class="xp-tag">Government Integration</span>
+          <div class="skills-group">
+            <div class="skills-label">Data</div>
+            <div class="skills-list">SQL Server · Oracle · Entity Framework Core · relational design · entity modeling ·
+              validation</div>
           </div>
-        </article>
+          <div class="skills-group">
+            <div class="skills-label">Security</div>
+            <div class="skills-list">JWT authentication · authorization</div>
+          </div>
+          <div class="skills-group">
+            <div class="skills-label">Real-Time &amp; Geospatial</div>
+            <div class="skills-list">SignalR · WebSockets · NetTopologySuite · location-based services</div>
+          </div>
+          <div class="skills-group">
+            <div class="skills-label">Integration</div>
+            <div class="skills-list">Government platforms · financial institutions · payment gateways · third-party APIs
+              · hardware / software</div>
+          </div>
+          <div class="skills-group">
+            <div class="skills-label">Libraries &amp; Tools</div>
+            <div class="skills-list">AutoMapper · Firebase · ImageSharp · Crystal Reports · ASP.NET Web Forms · Git
+            </div>
+          </div>
+          <div class="skills-group">
+            <div class="skills-label">Additional</div>
+            <div class="skills-list">Python · Django · Flask · Angular</div>
+          </div>
+        </section>
 
-        <article class="xp-item">
-          <div class="xp-row">
-            <div class="xp-title">Backend Developer</div>
-            <div class="xp-period">Sep 2021 — Nov 2025</div>
-          </div>
-          <div class="xp-company">Transport Information Technology · TransIT <span class="loc">Nasr City, Egypt</span></div>
-          <ul class="xp-bullets">
-            <li>Transportation-sector company associated with the Egyptian Ministry of Transport — built backend systems for production transportation, government, and commercial platforms (see projects below).</li>
-            <li>Real-time communication with SignalR / WebSockets, JWT authentication and authorization, payment gateway and tax authority integrations, and software integration with physical gate hardware.</li>
-          </ul>
-          <div class="xp-tags">
-            <span class="xp-tag">.NET 6</span><span class="xp-tag">ASP.NET Core</span><span class="xp-tag">SignalR</span><span class="xp-tag">NetTopologySuite</span><span class="xp-tag">JWT</span><span class="xp-tag">SQL Server</span><span class="xp-tag">Django</span><span class="xp-tag">Crystal Reports</span>
-          </div>
-        </article>
-      </section>
+        <!-- EDUCATION -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Education</h2>
+          <article class="edu-item">
+            <div class="edu-degree">B.Sc. in Information Systems</div>
+            <div class="edu-school">Faculty of Computers and Informatics, Zagazig University</div>
+            <div class="edu-meta">2017 — 2021 · Very Good with Honors</div>
+            <p class="edu-note">Graduation project: <strong>Lung &amp; Colon Cancer Diagnosis System</strong> — deep
+              learning histopathology classifier with a Flask backend and Angular frontend. Grade <em>A+</em>.</p>
+          </article>
+        </section>
 
-      <!-- SELECTED PROJECTS -->
-      <section class="cv-section">
-        <h2 class="cv-section-title">TransIT Projects</h2>
+        <!-- LANGUAGES -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Languages</h2>
+          <div class="lang-row"><span>Arabic</span><span class="lvl">Native</span></div>
+          <div class="lang-row"><span>English</span><span class="lvl">B1</span></div>
+        </section>
 
-        <article class="proj-item">
-          <div class="proj-row">
-            <div class="proj-title"><a href="https://play.google.com/store/apps/details?id=com.capitalTaxiApp&amp;pcampaignid=web_share" target="_blank" rel="noopener">Capital Taxi — Ride-Hailing Platform</a></div>
-            <div class="proj-stack">SignalR · WebSockets · JWT</div>
-          </div>
-          <ul class="xp-bullets">
-            <li>Real-time driver location tracking, driver availability, and zone-based driver selection.</li>
-            <li>Driver–passenger matching, full trip lifecycle (request → acceptance → tracking → completion), and configurable dynamic fare pricing.</li>
-          </ul>
-        </article>
+        <!-- INTERESTS / AVAILABILITY -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Availability</h2>
+          <p class="skills-list">Open to <strong style="color:var(--text);font-weight:500">remote</strong> and <strong
+              style="color:var(--text);font-weight:500">hybrid</strong> backend roles — contract or full-time.</p>
+        </section>
 
-        <article class="proj-item">
-          <div class="proj-row">
-            <div class="proj-title">Baghdadi Toll Station — Toll &amp; Gate Management</div>
-            <div class="proj-stack">Roads &amp; Bridges Authority</div>
-          </div>
-          <ul class="xp-bullets">
-            <li>Integrated gate software with tag readers, barriers, and Epson receipt printers; tag-based subscriptions trigger automatic gate opening.</li>
-            <li>Operator collection workflow with vehicle category–based fees and ticket generation.</li>
-          </ul>
-        </article>
-
-        <article class="proj-item">
-          <div class="proj-row">
-            <div class="proj-title"><a href="https://abelatrains.com/#/" target="_blank" rel="noopener">Abela — Sleeping Train Reservations</a></div>
-            <div class="proj-stack">Django · .NET · Crystal Reports</div>
-          </div>
-          <ul class="xp-bullets">
-            <li>Django backend for cabin reservations and booking; Egyptian Tax Authority (ETA) integration in .NET; National Bank of Egypt payment gateway.</li>
-            <li>Separate reporting system with ASP.NET Web Forms and Crystal Reports.</li>
-          </ul>
-        </article>
-
-        <article class="proj-item">
-          <div class="proj-row">
-            <div class="proj-title">BRT — Bus Rapid Transit</div>
-            <div class="proj-stack">ASP.NET Core · SQL Server</div>
-          </div>
-          <ul class="xp-bullets">
-            <li>Trip booking, ticket purchase, pre-boarding ticket validation, and multi-station / multi-route logic.</li>
-          </ul>
-        </article>
-
-        <article class="proj-item">
-          <div class="proj-row">
-            <div class="proj-title">Advertising Permits Management System</div>
-            <div class="proj-stack">Roads &amp; Bridges Authority</div>
-          </div>
-          <ul class="xp-bullets">
-            <li>Permit approval and renewal workflows with pricing by location / zone and advertisement type.</li>
-          </ul>
-        </article>
-
-        <article class="proj-item">
-          <div class="proj-row">
-            <div class="proj-title"><a href="https://www.mot.gov.eg/Home" target="_blank" rel="noopener">Ministry of Transport Website</a></div>
-            <div class="proj-stack">ASP.NET · CMS</div>
-          </div>
-          <ul class="xp-bullets">
-            <li>Backend and admin dashboard / CMS for news and content, with a publishing workflow reflected on the public site.</li>
-          </ul>
-        </article>
-      </section>
+      </aside>
 
     </div>
 
-    <!-- RIGHT COLUMN -->
-    <aside class="cv-side">
+    <!-- FOOTER -->
+    <footer class="cv-footer">
+      <span>Mohamed Bashir · Backend Developer · Cairo</span>
+      <span><a href="index.html">mohamedbashir.dev</a></span>
+    </footer>
 
-      <!-- PROFILE -->
-      <section class="cv-section profile">
-        <h2 class="cv-section-title">Profile</h2>
-        <p>Backend engineer with <strong>5 years</strong> of production experience in C# and .NET, across government &amp; financial integrations and real-time transportation platforms.</p>
-        <p>Experienced with SQL Server, Oracle, and EF Core in production, including private and restricted networks.</p>
-      </section>
+  </article>
 
-      <!-- SKILLS -->
-      <section class="cv-section">
-        <h2 class="cv-section-title">Technical Skills</h2>
+  <script>
+    (function () {
+      var btn = document.getElementById('themeToggle');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var cur = document.documentElement.getAttribute('data-theme') || 'light';
+        var next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) { }
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', next === 'dark' ? '#14120F' : '#F2EFE8');
+      });
+    })();
 
-        <div class="skills-group">
-          <div class="skills-label">Backend</div>
-          <div class="skills-list">C# · .NET 8 · .NET 6 · .NET Framework · ASP.NET Core Web API · ASP.NET Web API · REST APIs · Dependency Injection</div>
-        </div>
-        <div class="skills-group">
-          <div class="skills-label">Data</div>
-          <div class="skills-list">SQL Server · Oracle · Entity Framework Core · relational design · entity modeling · validation</div>
-        </div>
-        <div class="skills-group">
-          <div class="skills-label">Security</div>
-          <div class="skills-list">JWT authentication · authorization</div>
-        </div>
-        <div class="skills-group">
-          <div class="skills-label">Real-Time &amp; Geospatial</div>
-          <div class="skills-list">SignalR · WebSockets · NetTopologySuite · location-based services</div>
-        </div>
-        <div class="skills-group">
-          <div class="skills-label">Integration</div>
-          <div class="skills-list">Government platforms · financial institutions · payment gateways · third-party APIs · hardware / software</div>
-        </div>
-        <div class="skills-group">
-          <div class="skills-label">Libraries &amp; Tools</div>
-          <div class="skills-list">AutoMapper · Firebase · ImageSharp · Crystal Reports · ASP.NET Web Forms · Git</div>
-        </div>
-        <div class="skills-group">
-          <div class="skills-label">Additional</div>
-          <div class="skills-list">Python · Django · Flask · Angular</div>
-        </div>
-      </section>
-
-      <!-- EDUCATION -->
-      <section class="cv-section">
-        <h2 class="cv-section-title">Education</h2>
-        <article class="edu-item">
-          <div class="edu-degree">B.Sc. in Information Systems</div>
-          <div class="edu-school">Faculty of Computers and Informatics, Zagazig University</div>
-          <div class="edu-meta">2017 — 2021 · Very Good with Honors</div>
-          <p class="edu-note">Graduation project: <strong>Lung &amp; Colon Cancer Diagnosis System</strong> — deep learning histopathology classifier with a Flask backend and Angular frontend. Grade <em>A+</em>.</p>
-        </article>
-      </section>
-
-      <!-- LANGUAGES -->
-      <section class="cv-section">
-        <h2 class="cv-section-title">Languages</h2>
-        <div class="lang-row"><span>Arabic</span><span class="lvl">Native</span></div>
-        <div class="lang-row"><span>English</span><span class="lvl">B1</span></div>
-      </section>
-
-      <!-- INTERESTS / AVAILABILITY -->
-      <section class="cv-section">
-        <h2 class="cv-section-title">Availability</h2>
-        <p class="skills-list">Open to <strong style="color:var(--text);font-weight:500">remote</strong> and <strong style="color:var(--text);font-weight:500">hybrid</strong> backend roles — contract or full-time.</p>
-      </section>
-
-    </aside>
-
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="cv-footer">
-    <span>Mohamed Bashir · Backend Developer · Cairo</span>
-    <span><a href="index.html">mohamedbashir.dev</a></span>
-  </footer>
-
-</article>
-
-<script>
-  (function(){
-    var btn = document.getElementById('themeToggle');
-    if (!btn) return;
-    btn.addEventListener('click', function(){
-      var cur = document.documentElement.getAttribute('data-theme') || 'light';
-      var next = cur === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      try { localStorage.setItem('theme', next); } catch(e) {}
-      var meta = document.querySelector('meta[name="theme-color"]');
-      if (meta) meta.setAttribute('content', next === 'dark' ? '#14120F' : '#F2EFE8');
-    });
-  })();
-
-  if (window.location.hash === '#print') {
-    setTimeout(() => window.print(), 350);
-  }
-</script>
+    if (window.location.hash === '#print') {
+      setTimeout(() => window.print(), 350);
+    }
+  </script>
 
 </body>
+
 </html>
