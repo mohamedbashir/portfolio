@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohamed Bashir — Backend Developer</title>
   <meta name="description"
-    content="Mohamed Bashir — Backend Developer building scalable .NET Core systems and microservices across transportation, government, and finance. ASP.NET Core, EF Core, SQL Server, Docker, Azure / AWS." />
+    content="Mohamed Bashir — Backend Developer with 5 years building production C# / .NET systems: government and financial integration services at iScore, real-time transportation platforms at TransIT. ASP.NET Core, EF Core, SQL Server, Oracle, SignalR." />
   <meta name="theme-color" content="#F2EFE8" />
   <meta name="color-scheme" content="light dark" />
   <script>
@@ -23,7 +23,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Mohamed Bashir — Backend Developer" />
   <meta property="og:description"
-    content="Backend Developer crafting scalable .NET systems. ASP.NET Core · Microservices · Cloud." />
+    content="Backend Developer · C# / .NET · Government &amp; financial integrations · Real-time transportation systems." />
   <meta property="og:locale" content="en_US" />
   <!-- Absolute URL required by social scrapers. Update the host if you deploy elsewhere. -->
   <meta property="og:url" content="https://mohamedbashir.github.io/portfolio/" />
@@ -33,7 +33,7 @@
   <meta property="og:image:alt" content="Mohamed Bashir — Backend Developer" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mohamed Bashir — Backend Developer" />
-  <meta name="twitter:description" content="Backend Developer · ASP.NET Core · Microservices · Cloud." />
+  <meta name="twitter:description" content="Backend Developer · C# / .NET · Government &amp; financial integrations · Real-time systems." />
   <meta name="twitter:image" content="https://mohamedbashir.github.io/portfolio/og-image.png" />
   <link rel="icon" type="image/svg+xml"
     href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%23161616"/><text x="50%25" y="56%25" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, serif" font-style="italic" font-weight="500" font-size="32" fill="%23F2EFE8">m</text></svg>' />
@@ -150,6 +150,20 @@
       .container {
         padding: 0 20px;
       }
+    }
+
+    /* ============== SCROLL PROGRESS ============== */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      z-index: 60;
+      background: var(--accent);
+      transform-origin: left;
+      transform: scaleX(0);
+      pointer-events: none;
     }
 
     /* ============== NAVBAR ============== */
@@ -631,6 +645,10 @@
       transition: transform 0.3s ease, background 0.3s;
     }
 
+    a.work-arrow {
+      text-decoration: none;
+    }
+
     .work-card:hover .work-arrow {
       transform: translate(4px, -4px) rotate(-15deg);
       background: var(--accent);
@@ -758,6 +776,61 @@
       display: flex;
       flex-direction: column;
       gap: 18px;
+      position: relative;
+      padding-left: 40px;
+    }
+
+    /* Timeline: faint track, a fill that draws with scroll, and one dot per role */
+    .exp-track,
+    .exp-fill {
+      position: absolute;
+      left: 11px;
+      width: 2px;
+      border-radius: 2px;
+      top: var(--tl-top, 0);
+      height: var(--tl-len, 100%);
+    }
+
+    .exp-track {
+      background: var(--border);
+    }
+
+    .exp-fill {
+      background: var(--accent);
+      transform-origin: top;
+      transform: scaleY(var(--tl-progress, 0));
+    }
+
+    .exp-dot {
+      position: absolute;
+      left: 5px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 2px solid var(--border);
+      transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .exp-dot.active {
+      border-color: var(--accent);
+      background: var(--accent);
+      box-shadow: 0 0 0 5px var(--glow-accent);
+    }
+
+    @media (max-width: 800px) {
+      .exp-list {
+        padding-left: 28px;
+      }
+
+      .exp-track,
+      .exp-fill {
+        left: 5px;
+      }
+
+      .exp-dot {
+        left: -1px;
+      }
     }
 
     .exp-row {
@@ -1895,6 +1968,7 @@
 </head>
 
 <body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <!-- NAV -->
   <header class="navbar">
@@ -1951,16 +2025,16 @@
           <span class="star">✦</span>
           that <em>just work.</em>
         </h1>
-        <p class="hero-subtitle reveal">Backend Developer crafting .NET microservices across transportation, government,
-          and finance — turning complex business logic into resilient APIs, clean data flows, and systems that quietly
-          handle scale.</p>
+        <p class="hero-subtitle reveal">Backend Developer with five years of production C# and .NET — building the
+          integration services that connect banks and government platforms with national authorities, and the
+          real-time systems behind Egypt's transportation network.</p>
         <div class="hero-meta reveal">
-          <div><strong>4+</strong>Years building production systems</div>
-          <div><strong>6+</strong>Live systems shipped</div>
+          <div><strong data-count="5">5</strong>Years building production systems</div>
+          <div><strong data-count="11">11</strong>Production systems delivered</div>
         </div>
         <div class="hero-actions reveal">
           <a href="cv.html" class="hero-btn primary">View CV</a>
-          <a href="Mohamed_Bashir_Resume.pdf" class="hero-btn ghost" download>Download CV (PDF)</a>
+          <a href="cv.html#print" class="hero-btn ghost">Download CV (PDF)</a>
           <a href="#contact" class="hero-btn ghost">Get in touch</a>
         </div>
       </div>
@@ -1975,9 +2049,9 @@
           <pre class="postcard-body"><code><span class="p">{</span>
   <span class="k">"name"</span><span class="p">:</span> <span class="s">"Mohamed Bashir"</span><span class="p">,</span>
   <span class="k">"role"</span><span class="p">:</span> <span class="s">"Backend Developer"</span><span class="p">,</span>
-  <span class="k">"stack"</span><span class="p">:</span> <span class="p">[</span><span class="s">".NET Core"</span><span class="p">,</span> <span class="s">"EF Core"</span><span class="p">,</span> <span class="s">"Docker"</span><span class="p">]</span><span class="p">,</span>
+  <span class="k">"stack"</span><span class="p">:</span> <span class="p">[</span><span class="s">".NET 8"</span><span class="p">,</span> <span class="s">"EF Core"</span><span class="p">,</span> <span class="s">"SQL Server"</span><span class="p">]</span><span class="p">,</span>
   <span class="k">"based_in"</span><span class="p">:</span> <span class="s">"Cairo, Egypt"</span><span class="p">,</span>
-  <span class="k">"shipping"</span><span class="p">:</span> <span class="s">"i-Score · credit bureau"</span><span class="p">,</span>
+  <span class="k">"shipping"</span><span class="p">:</span> <span class="s">"iScore · gov integrations"</span><span class="p">,</span>
   <span class="k">"open_to"</span><span class="p">:</span> <span class="p">[</span><span class="s">"remote"</span><span class="p">,</span> <span class="s">"hybrid"</span><span class="p">]</span>
 <span class="p">}</span></code></pre>
           <div class="postcard-foot">
@@ -1993,31 +2067,31 @@
   <div class="marquee-wrap">
     <div class="marquee-row">
       <span class="marquee-item">ASP.NET Core</span>
-      <span class="marquee-item">Microservices</span>
+      <span class="marquee-item">.NET 8</span>
       <span class="marquee-item">Entity Framework Core</span>
       <span class="marquee-item">SQL Server</span>
-      <span class="marquee-item">Docker</span>
-      <span class="marquee-item">Azure</span>
+      <span class="marquee-item">Oracle</span>
+      <span class="marquee-item">SignalR</span>
       <span class="marquee-item">ASP.NET Core</span>
-      <span class="marquee-item">Microservices</span>
+      <span class="marquee-item">.NET 8</span>
       <span class="marquee-item">Entity Framework Core</span>
       <span class="marquee-item">SQL Server</span>
-      <span class="marquee-item">Docker</span>
-      <span class="marquee-item">Azure</span>
+      <span class="marquee-item">Oracle</span>
+      <span class="marquee-item">SignalR</span>
     </div>
     <div class="marquee-row reverse">
       <span class="marquee-item">REST APIs</span>
-      <span class="marquee-item">JWT / OAuth</span>
-      <span class="marquee-item">SignalR</span>
-      <span class="marquee-item">Redis</span>
-      <span class="marquee-item">CI / CD</span>
-      <span class="marquee-item">AWS</span>
+      <span class="marquee-item">JWT Auth</span>
+      <span class="marquee-item">WebSockets</span>
+      <span class="marquee-item">NetTopologySuite</span>
+      <span class="marquee-item">Payment Gateways</span>
+      <span class="marquee-item">Gov Integrations</span>
       <span class="marquee-item">REST APIs</span>
-      <span class="marquee-item">JWT / OAuth</span>
-      <span class="marquee-item">SignalR</span>
-      <span class="marquee-item">Redis</span>
-      <span class="marquee-item">CI / CD</span>
-      <span class="marquee-item">AWS</span>
+      <span class="marquee-item">JWT Auth</span>
+      <span class="marquee-item">WebSockets</span>
+      <span class="marquee-item">NetTopologySuite</span>
+      <span class="marquee-item">Payment Gateways</span>
+      <span class="marquee-item">Gov Integrations</span>
     </div>
   </div>
 
@@ -2033,32 +2107,28 @@
           <div class="cap-num">01</div>
           <div>
             <h3>Backend Engineering</h3>
-            <p>Production-grade APIs in ASP.NET Core with clean domains, sensible boundaries, and predictable latency.
-              Codebases the next engineer can actually pick up.</p>
+            <p>REST APIs in C# with ASP.NET Core Web API on .NET 8 / .NET 6 — dependency injection, request validation, and clean contracts that the next engineer can actually pick up.</p>
           </div>
         </div>
         <div class="cap reveal">
           <div class="cap-num">02</div>
           <div>
-            <h3>Microservices &amp; Architecture</h3>
-            <p>From monoliths to event-driven services — I break problems into the right pieces, wire them with honest
-              contracts, and keep the seams calm under real traffic.</p>
+            <h3>Government &amp; Financial Integration</h3>
+            <p>Secure system-to-system integration with the Ministry of Interior, Public Prosecution, ACA, GAFI, and the Digital Egypt Platform — plus payment gateways and the Egyptian Tax Authority.</p>
           </div>
         </div>
         <div class="cap reveal">
           <div class="cap-num">03</div>
           <div>
-            <h3>Database &amp; Performance</h3>
-            <p>EF Core, SQL Server, Oracle — query tuning, indexing strategy, schema design that survives growth instead
-              of fighting it. Measured wins, not folklore.</p>
+            <h3>Data &amp; Modeling</h3>
+            <p>SQL Server, Oracle, and Entity Framework Core in production — relational schema design, entity modeling, and validation rules, including private and restricted networks.</p>
           </div>
         </div>
         <div class="cap reveal">
           <div class="cap-num">04</div>
           <div>
-            <h3>Cloud &amp; DevOps</h3>
-            <p>Dockerized services, CI/CD pipelines, Azure / AWS deployments with secure JWT and OAuth flows. Less
-              ceremony, more shipping.</p>
+            <h3>Real-Time &amp; Hardware</h3>
+            <p>SignalR / WebSockets for live location tracking, NetTopologySuite for zone-based matching, and backend integration with physical gates, tag readers, barriers, and receipt printers.</p>
           </div>
         </div>
       </div>
@@ -2104,10 +2174,47 @@
       <div class="work-grid">
         <article class="work-card reveal" data-tilt>
           <div>
-            <div class="work-meta"><span>Transportation</span><span>Featured</span></div>
-            <h3 class="work-title">Bus Rapid Transit (BRT) Ticketing</h3>
-            <p class="work-desc">Web API ticketing for 500+ daily passengers across 12+ stations. 40% lower booking
-              latency, 10,000+ monthly transactions.</p>
+            <div class="work-meta"><span>Ride-hailing</span><span>Featured</span></div>
+            <h3 class="work-title">Capital Taxi</h3>
+            <p class="work-desc">Ride-hailing platform in the New Administrative Capital. Real-time driver tracking, zone-based driver selection, driver–passenger matching, full trip lifecycle, and dynamic fare pricing.</p>
+          </div>
+          <div class="work-footer">
+            <span>SignalR · WebSockets · JWT</span>
+            <a class="work-arrow" href="https://play.google.com/store/apps/details?id=com.capitalTaxiApp&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer" aria-label="View Capital Taxi on Google Play">↗</a>
+          </div>
+        </article>
+
+        <article class="work-card reveal" data-tilt>
+          <div>
+            <div class="work-meta"><span>Highways</span><span>Roads &amp; Bridges</span></div>
+            <h3 class="work-title">Baghdadi Toll Station</h3>
+            <p class="work-desc">Toll &amp; gate management integrated with physical hardware — tag readers, barriers, automatic gate opening for subscribed vehicles, category-based fees, and Epson receipt printing.</p>
+          </div>
+          <div class="work-footer">
+            <span>Hardware Integration · .NET</span>
+            <span class="work-arrow">→</span>
+          </div>
+        </article>
+
+        <article class="work-card reveal" data-tilt>
+          <div>
+            <div class="work-meta"><span>Rail</span></div>
+            <h3 class="work-title">Abela Sleeping Trains</h3>
+            <p class="work-desc">Cabin reservation and booking backend, National Bank of Egypt payment gateway, Egyptian Tax Authority integration, and a separate Crystal Reports reporting system.</p>
+          </div>
+          <div class="work-footer">
+            <span>Django · .NET · Crystal Reports</span>
+            <a class="work-arrow" href="https://abelatrains.com/#/" target="_blank" rel="noopener noreferrer" aria-label="Visit Abela Trains">↗</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="work-grid alt">
+        <article class="work-card reveal" data-tilt>
+          <div>
+            <div class="work-meta"><span>Transit</span></div>
+            <h3 class="work-title">Bus Rapid Transit (BRT)</h3>
+            <p class="work-desc">Trip booking and ticket purchase across a multi-station, multi-route network, with pre-boarding ticket validation and metro-style station / route logic.</p>
           </div>
           <div class="work-footer">
             <span>ASP.NET Core · SQL Server</span>
@@ -2117,54 +2224,12 @@
 
         <article class="work-card reveal" data-tilt>
           <div>
-            <div class="work-meta"><span>Ride-hailing</span></div>
-            <h3 class="work-title">Capital Taxi</h3>
-            <p class="work-desc">Ride-hailing backend, 100+ concurrent users daily, 40% faster geo queries, 200+ drivers
-              onboarded monthly.</p>
+            <div class="work-meta"><span>Government</span><span>Roads &amp; Bridges</span></div>
+            <h3 class="work-title">Advertising Permits System</h3>
+            <p class="work-desc">Permit approval and renewal workflows with configurable pricing by advertising location / zone and advertisement type.</p>
           </div>
           <div class="work-footer">
-            <span>SignalR · EF Core</span>
-            <span class="work-arrow">→</span>
-          </div>
-        </article>
-
-        <article class="work-card reveal" data-tilt>
-          <div>
-            <div class="work-meta"><span>Highways</span></div>
-            <h3 class="work-title">Baghdadi Toll Station</h3>
-            <p class="work-desc">50,000+ monthly transactions. RFID integration automating 95% of vehicle detection,
-              saving ~15h weekly.</p>
-          </div>
-          <div class="work-footer">
-            <span>RFID · ASP.NET</span>
-            <span class="work-arrow">→</span>
-          </div>
-        </article>
-      </div>
-
-      <div class="work-grid alt">
-        <article class="work-card reveal" data-tilt>
-          <div>
-            <div class="work-meta"><span>Rail</span></div>
-            <h3 class="work-title">Abela Sleeping Trains</h3>
-            <p class="work-desc">Reporting platform + Bank El Ahly payment gateway + automated e-invoice compliance with
-              the Egyptian Tax Authority.</p>
-          </div>
-          <div class="work-footer">
-            <span>Payment Gateway</span>
-            <span class="work-arrow">→</span>
-          </div>
-        </article>
-
-        <article class="work-card reveal" data-tilt>
-          <div>
-            <div class="work-meta"><span>Government</span></div>
-            <h3 class="work-title">GARB Licensing System</h3>
-            <p class="work-desc">Workflow automation for 100+ monthly road-advertisement licenses. 35% faster approvals.
-            </p>
-          </div>
-          <div class="work-footer">
-            <span>.NET 7 · Workflow</span>
+            <span>.NET · Workflow</span>
             <span class="work-arrow">→</span>
           </div>
         </article>
@@ -2172,13 +2237,12 @@
         <article class="work-card reveal" data-tilt>
           <div>
             <div class="work-meta"><span>Government</span><span>CMS</span></div>
-            <h3 class="work-title">Ministry of Transportation CMS</h3>
-            <p class="work-desc">Content management cutting update time 50% across 20+ pages. Query optimization dropped
-              load time by 40%.</p>
+            <h3 class="work-title">Ministry of Transport Website</h3>
+            <p class="work-desc">Backend and admin dashboard / CMS for the official Ministry of Transport site, with a publishing workflow that reflects content changes on the public website.</p>
           </div>
           <div class="work-footer">
-            <span>ASP.NET Core · EF Core</span>
-            <span class="work-arrow">→</span>
+            <span>ASP.NET · CMS</span>
+            <a class="work-arrow" href="https://www.mot.gov.eg/Home" target="_blank" rel="noopener noreferrer" aria-label="Visit the Ministry of Transport website">↗</a>
           </div>
         </article>
       </div>
@@ -2198,13 +2262,14 @@
         </div>
         <div class="about-body reveal">
           <h2 class="section-title">A backend engineer who quietly <em>keeps the lights on.</em></h2>
-          <p>I'm Mohamed, a backend developer based in Cairo with four years building real production systems for
-            transportation, government, and finance. I care about the boring parts — clean APIs, sensible data models,
-            observability — because that's what lets teams move fast without breaking things in the dark.</p>
-          <p>Currently, I work at <strong>i-Score</strong>, where I build .NET backend systems for the finance sector.
-            Before that, I spent four years at <strong>TransIT</strong>, delivering <strong>+6</strong> production
-            backend projects across the transportation sector, with a focus on scalability, reliability, and operational
-            stability. Earlier, I started my career through an AI internship at <strong>IBM</strong>.</p>
+          <p>I'm Mohamed, a backend engineer based in Cairo with five years building production systems in C# and .NET
+            for finance, government, and transportation. I care about the boring parts — clean APIs, sensible data
+            models, honest validation — because that's what lets integrations between institutions run quietly.</p>
+          <p>Currently a Senior Software Engineer at <strong>iScore</strong>, the Egyptian Credit Bureau, I build the
+            APIs and integration services that connect banks and the Digital Egypt Platform with national authorities —
+            the Ministry of Interior, Public Prosecution, Administrative Control Authority, and GAFI. Before that, I
+            spent four years at <strong>TransIT</strong>, building <strong>6</strong> production systems associated with
+            the Egyptian Ministry of Transport — from real-time ride-hailing to hardware-integrated toll gates.</p>
           <div class="about-socials">
             <a href="mailto:mohamed.basher.daoud@gmail.com">Email →</a>
             <a href="https://linkedin.com/in/mohamed-basher" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
@@ -2222,28 +2287,28 @@
         <span class="section-label">Experience</span>
         <h2 class="section-title">Where I've <em>worked.</em></h2>
       </div>
-      <div class="exp-list">
+      <div class="exp-list" id="expList">
+        <span class="exp-track" aria-hidden="true"></span>
+        <span class="exp-fill" aria-hidden="true"></span>
         <div class="exp-row reveal">
           <div class="exp-period">Nov 2025 — Present<br>Cairo, Egypt</div>
           <div>
-            <div class="exp-title">Senior Software Engineer (.NET)</div>
-            <div class="exp-company">The Egyptian Credit Bureau · i-Score</div>
-            <p class="exp-desc">Engineering scalable backend services and microservices for enterprise credit
-              information systems. Secure, cloud-deployed .NET solutions integrated with Angular frontends.</p>
+            <div class="exp-title">Senior Software Engineer / Backend .NET</div>
+            <div class="exp-company">The Egyptian Credit Bureau S.A.E · iScore</div>
+            <p class="exp-desc">Developing REST APIs and integration services that connect financial institutions and
+              government platforms with national authorities — secure request exchange, inquiry workflows, entity
+              models, and validation for citizen- and institution-facing services.</p>
             <div class="exp-tags">
-              <span class="exp-tag">ASP.NET Core</span><span class="exp-tag">Microservices</span><span
-                class="exp-tag">SQL Server</span><span class="exp-tag">Oracle</span><span class="exp-tag">JWT /
-                OAuth</span><span class="exp-tag">Docker</span><span class="exp-tag">Azure / AWS</span>
+              <span class="exp-tag">.NET 8</span><span class="exp-tag">ASP.NET Core Web API</span><span class="exp-tag">EF Core</span><span class="exp-tag">SQL Server</span><span class="exp-tag">Oracle</span><span class="exp-tag">REST APIs</span><span class="exp-tag">Government Integration</span>
             </div>
             <div class="exp-projects">
               <span class="exp-projects-label">Key Projects</span>
               <ul class="exp-proj-list">
-                <li><span class="kp-name">DVS (Data Verification Services)</span><span class="kp-gov">Government
-                    Integration: Administrative Control Authority</span></li>
-                <li><span class="kp-name">NID (National ID Services)</span><span class="kp-gov">Government Integration:
-                    Ministry of Interior</span></li>
-                <li><span class="kp-name">PPO (Public Prosecution Services)</span><span class="kp-gov">Government
-                    Integration: Public Prosecution Office</span></li>
+                <li><span class="kp-name">Digital Egypt Platform Integration</span><span class="kp-gov">Citizen credit-score inquiries from the national portal, processed end-to-end against iScore</span></li>
+                <li><span class="kp-name">NID — National ID Data Service</span><span class="kp-gov">Verified citizen data by National ID for banks · Ministry of Interior</span></li>
+                <li><span class="kp-name">PPO — Criminal Status Inquiry</span><span class="kp-gov">Criminal-status inquiries for subscribed entities · Public Prosecution</span></li>
+                <li><span class="kp-name">DVS — Document Verification Service</span><span class="kp-gov">Driver licenses, birth certificates, vehicles, and utility meters · Administrative Control Authority</span></li>
+                <li><span class="kp-name">GAFI — Investment &amp; Free Zones</span><span class="kp-gov">Company incorporation, bank certificate registration, and retrieval APIs</span></li>
               </ul>
             </div>
           </div>
@@ -2255,30 +2320,25 @@
           <div>
             <div class="exp-title">Backend Developer</div>
             <div class="exp-company">Transport Information Technology · TransIT</div>
-            <p class="exp-desc">Engineered RESTful APIs cutting response times from 300ms to 150ms. Delivered 5–7
-              monthly releases with 98.5% uptime, reducing post-deployment bugs by 40% across 12 major releases.</p>
+            <p class="exp-desc">Transportation-sector company associated with the Egyptian Ministry of Transport.
+              Built backend systems for production transportation, government, and commercial platforms — real-time
+              ride-hailing, hardware-integrated tolling, payment gateway and tax authority integrations.</p>
             <div class="exp-tags">
-              <span class="exp-tag">ASP.NET Core</span><span class="exp-tag">EF Core</span><span class="exp-tag">SQL
-                Server</span><span class="exp-tag">Web Forms</span><span class="exp-tag">CI/CD</span><span
-                class="exp-tag">SignalR</span>
+              <span class="exp-tag">.NET 6</span><span class="exp-tag">ASP.NET Core</span><span class="exp-tag">SignalR</span><span class="exp-tag">NetTopologySuite</span><span class="exp-tag">JWT</span><span class="exp-tag">SQL Server</span><span class="exp-tag">Django</span><span class="exp-tag">Crystal Reports</span>
+            </div>
+            <div class="exp-projects">
+              <span class="exp-projects-label">Key Projects</span>
+              <ul class="exp-proj-list">
+                <li><span class="kp-name">Capital Taxi</span><span class="kp-gov">Real-time ride-hailing — SignalR tracking, zone-based matching, JWT</span></li>
+                <li><span class="kp-name">Baghdadi Toll Station</span><span class="kp-gov">Toll &amp; gate management integrated with tag readers, barriers, and printers</span></li>
+                <li><span class="kp-name">Abela Sleeping Trains</span><span class="kp-gov">Reservations with NBE payment gateway and Tax Authority (ETA) integration</span></li>
+                <li><span class="kp-name">BRT — Bus Rapid Transit</span><span class="kp-gov">Multi-station booking, ticketing, and pre-boarding validation</span></li>
+                <li><span class="kp-name">Advertising Permits System</span><span class="kp-gov">Permit approval, renewal, and zone / type-based pricing</span></li>
+                <li><span class="kp-name">Ministry of Transport Website</span><span class="kp-gov">Backend, admin dashboard / CMS, and publishing workflow</span></li>
+              </ul>
             </div>
           </div>
           <div class="exp-duration">4y 2m</div>
-        </div>
-
-        <div class="exp-row reveal">
-          <div class="exp-period">Oct 2020 — Nov 2020<br>Egypt</div>
-          <div>
-            <div class="exp-title">AI Analyst Intern</div>
-            <div class="exp-company">IBM</div>
-            <p class="exp-desc">Built NLP chatbots on IBM Watson Assistant improving response accuracy by 25%. Trained
-              ML models on IBM Cloud, increasing classification accuracy and cutting training time by 15%.</p>
-            <div class="exp-tags">
-              <span class="exp-tag">IBM Watson</span><span class="exp-tag">NLP</span><span class="exp-tag">Machine
-                Learning</span><span class="exp-tag">IBM Cloud</span>
-            </div>
-          </div>
-          <div class="exp-duration">2 mo</div>
         </div>
       </div>
     </div>
@@ -2293,11 +2353,13 @@
       </div>
       <div class="edu-grid">
         <div class="edu-card reveal">
-          <div class="edu-meta">Jul 2017 — Jul 2021 · Zagazig, Egypt</div>
-          <h3>Bachelor of Computers and Informatics</h3>
-          <div class="edu-school">Zagazig University</div>
-          <p>Graduation project: <strong style="color:var(--text)">Lung and Colon Cancer Diagnosis System</strong> —
-            Grade <em style="font-family:Fraunces,serif;color:var(--accent-warm);font-style:italic">A+</em>.</p>
+          <div class="edu-meta">2017 — 2021 · Zagazig, Egypt</div>
+          <h3>B.Sc. in Information Systems</h3>
+          <div class="edu-school">Faculty of Computers and Informatics, Zagazig University</div>
+          <p>Very Good with Honors. Graduation project: <strong style="color:var(--text)">Lung and Colon Cancer
+              Diagnosis System</strong> — a deep learning histopathology classifier (benign / malignant) with a Flask
+            backend and Angular frontend. Grade <em
+              style="font-family:Fraunces,serif;color:var(--accent-warm);font-style:italic">A+</em>.</p>
         </div>
         <div class="edu-card reveal">
           <h3 style="font-size:1.35rem">Languages</h3>
@@ -2366,7 +2428,7 @@
             <li><a href="#work">Work</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="cv.html">CV / Resume</a></li>
-            <li><a href="Mohamed_Bashir_Resume.pdf" download>Download CV (PDF)</a></li>
+            <li><a href="cv.html#print">Download CV (PDF)</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -2472,6 +2534,82 @@
         card.style.setProperty('--my', (e.clientY - r.top) + 'px');
       });
     });
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* Count-up for hero numbers — the final value is already in the markup */
+    const countIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        countIO.unobserve(e.target);
+        const el = e.target;
+        const target = +el.dataset.count;
+        const start = performance.now();
+        const dur = 1400;
+        (function tick(now) {
+          const t = Math.min((now - start) / dur, 1);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3)));
+          if (t < 1) requestAnimationFrame(tick);
+        })(start);
+      });
+    }, { threshold: 0.6 });
+    if (!reduceMotion) {
+      document.querySelectorAll('[data-count]').forEach(el => {
+        el.textContent = '0';
+        countIO.observe(el);
+      });
+    }
+
+    /* Scroll progress bar + experience timeline, updated once per frame */
+    const progressBar = document.getElementById('scrollProgress');
+    const expList = document.getElementById('expList');
+    let expDots = [];
+
+    function layoutTimeline() {
+      if (!expList) return;
+      expDots.forEach(d => d.remove());
+      const rows = [...expList.querySelectorAll('.exp-row')];
+      expDots = rows.map(row => {
+        const dot = document.createElement('span');
+        dot.className = 'exp-dot';
+        dot.setAttribute('aria-hidden', 'true');
+        dot.style.top = (row.offsetTop + 36) + 'px';
+        dot.dataset.y = row.offsetTop + 43;
+        expList.appendChild(dot);
+        return dot;
+      });
+      if (expDots.length) {
+        const first = +expDots[0].dataset.y;
+        const last = +expDots[expDots.length - 1].dataset.y;
+        expList.style.setProperty('--tl-top', first + 'px');
+        expList.style.setProperty('--tl-len', (last - first) + 'px');
+      }
+    }
+
+    function updateScroll() {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      if (progressBar) progressBar.style.transform = 'scaleX(' + (max > 0 ? scrollY / max : 0) + ')';
+      if (!expList || !expDots.length) return;
+      const first = +expDots[0].dataset.y;
+      const len = +expDots[expDots.length - 1].dataset.y - first;
+      // The line reaches a point as it crosses 60% of the viewport height
+      const reached = reduceMotion ? Infinity : innerHeight * 0.6 - expList.getBoundingClientRect().top;
+      const p = len > 0 ? Math.max(0, Math.min(1, (reached - first) / len)) : (reached >= first ? 1 : 0);
+      expList.style.setProperty('--tl-progress', p);
+      expDots.forEach(d => d.classList.toggle('active', reached >= +d.dataset.y));
+    }
+
+    let scrollTicking = false;
+    function onScroll() {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      requestAnimationFrame(() => { updateScroll(); scrollTicking = false; });
+    }
+    layoutTimeline();
+    updateScroll();
+    addEventListener('scroll', onScroll, { passive: true });
+    addEventListener('resize', () => { layoutTimeline(); updateScroll(); });
+    addEventListener('load', () => { layoutTimeline(); updateScroll(); });
 
     /* Orbit badge — fade in after the hero scrolls out */
     const orbit = document.getElementById('orbitBadge');
@@ -2597,7 +2735,7 @@
           { t: 'Contact', s: 'Get in touch', ic: arrow, run: function () { go('#contact'); } },
           { t: 'Copy email', s: 'mohamed.basher.daoud@gmail.com', ic: mail, run: function () { copy('mohamed.basher.daoud@gmail.com').then(function () { toast('Email copied ✓'); }); } },
           { t: 'View CV', s: 'Open the web résumé', ic: doc, run: function () { location.href = 'cv.html'; } },
-          { t: 'Download CV (PDF)', s: 'Save the résumé', ic: doc, run: function () { location.href = 'Mohamed_Bashir_Resume.pdf'; } },
+          { t: 'Download CV (PDF)', s: 'Save the résumé', ic: doc, run: function () { location.href = 'cv.html#print'; } },
           { t: 'GitHub', s: 'github.com/mohamedbashir', ic: ext, run: function () { open('https://github.com/mohamedbashir', '_blank', 'noopener'); } },
           { t: 'LinkedIn', s: 'linkedin.com/in/mohamed-basher', ic: ext, run: function () { open('https://linkedin.com/in/mohamed-basher', '_blank', 'noopener'); } },
           { t: 'Toggle theme', s: 'Light / dark', ic: sun, run: function () { var b = document.getElementById('themeToggle'); if (b) b.click(); } }

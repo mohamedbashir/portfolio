@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Mohamed Bashir — CV / Resume</title>
-<meta name="description" content="Curriculum Vitae of Mohamed Bashir — Backend Developer specializing in .NET Core, microservices, and scalable systems across transportation, government, and finance." />
+<meta name="description" content="Curriculum Vitae of Mohamed Bashir — Backend Developer with 5 years of C# / .NET: government and financial integrations at iScore and real-time transportation systems at TransIT." />
 <meta name="theme-color" content="#F2EFE8" />
 <meta name="color-scheme" content="light dark" />
 <meta name="robots" content="index, follow" />
@@ -337,6 +337,14 @@ a { color: inherit; text-decoration: none; }
   font-size: 1rem;
   letter-spacing: -0.01em;
 }
+.proj-title a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+}
+.proj-item .xp-bullets { margin-top: 4px; }
+.proj-item .xp-bullets li { font-size: 0.88rem; color: var(--muted); }
 .proj-stack {
   font-family: 'Fraunces', serif;
   font-style: italic;
@@ -553,8 +561,8 @@ a { color: inherit; text-decoration: none; }
   <header class="cv-header">
     <div>
       <h1 class="cv-name">Mohamed <em>Bashir</em></h1>
-      <div class="cv-role">Backend Developer · .NET Core</div>
-      <p class="cv-tagline">Four years building production .NET systems across transportation, government, and finance. I care about boring code, honest contracts, and the kind of architecture that quietly keeps the lights on.</p>
+      <div class="cv-role">Backend Developer · C# / .NET</div>
+      <p class="cv-tagline">Five years building production C# / .NET systems — integration services connecting financial institutions and government platforms with national authorities, and real-time transportation platforms for the Egyptian Ministry of Transport ecosystem.</p>
     </div>
     <address class="cv-contact">
       <div><span class="label">Email</span><a href="mailto:mohamed.basher.daoud@gmail.com">mohamed.basher.daoud@gmail.com</a></div>
@@ -578,26 +586,19 @@ a { color: inherit; text-decoration: none; }
 
         <article class="xp-item">
           <div class="xp-row">
-            <div class="xp-title">Senior Software Engineer (.NET)</div>
+            <div class="xp-title">Senior Software Engineer / Backend .NET</div>
             <div class="xp-period">Nov 2025 — Present</div>
           </div>
-          <div class="xp-company">The Egyptian Credit Bureau · i-Score <span class="loc">Cairo, Egypt</span></div>
+          <div class="xp-company">The Egyptian Credit Bureau S.A.E · iScore <span class="loc">Cairo, Egypt</span></div>
           <ul class="xp-bullets">
-            <li>Design and develop secure backend services and REST APIs in ASP.NET Core for enterprise verification and credit-information platforms consumed by banks and financial institutions.</li>
-            <li>Build and maintain secure government and enterprise integrations for identity verification and information inquiry, enabling reliable secure data exchange between systems.</li>
-            <li>Implement JWT / OAuth authentication, authorization, logging, and monitoring; tune data access and performance across SQL Server and Oracle.</li>
-            <li>Contribute across the full SDLC — analysis, solution design, development, testing, deployment, and production support.</li>
+            <li><strong>Digital Egypt Platform:</strong> built the end-to-end credit score inquiry workflow — receiving citizen requests from the national portal, processing them against iScore, and returning results securely.</li>
+            <li><strong>NID — National ID Data Service:</strong> APIs letting banks and subscribed institutions retrieve verified citizen information by National ID, integrated with the Ministry of Interior.</li>
+            <li><strong>PPO — Criminal Status Inquiry:</strong> backend services and APIs delivering criminal-status information through integration with the Egyptian Public Prosecution.</li>
+            <li><strong>DVS — Document Verification Service:</strong> Administrative Control Authority integration for verifying driver licenses, birth certificates, vehicle information, and water / electricity meters.</li>
+            <li><strong>GAFI:</strong> APIs for company incorporation and bank certificate registration — entity models, relational design, validation rules, and retrieval by Request ID and Certificate ID.</li>
           </ul>
           <div class="xp-tags">
-            <span class="xp-tag">ASP.NET Core</span><span class="xp-tag">Enterprise Integrations</span><span class="xp-tag">SQL Server</span><span class="xp-tag">Oracle</span><span class="xp-tag">JWT / OAuth</span><span class="xp-tag">EF Core</span><span class="xp-tag">REST APIs</span>
-          </div>
-          <div class="xp-projects">
-            <div class="xp-projects-label">Key Projects</div>
-            <ul class="xp-proj-list">
-              <li><span class="kp-name">DVS (Data Verification Services)</span><span class="kp-gov">Government Integration: Administrative Control Authority</span></li>
-              <li><span class="kp-name">NID (National ID Services)</span><span class="kp-gov">Government Integration: Ministry of Interior</span></li>
-              <li><span class="kp-name">PPO (Public Prosecution Services)</span><span class="kp-gov">Government Integration: Public Prosecution Office</span></li>
-            </ul>
+            <span class="xp-tag">.NET 8</span><span class="xp-tag">ASP.NET Core Web API</span><span class="xp-tag">EF Core</span><span class="xp-tag">SQL Server</span><span class="xp-tag">Oracle</span><span class="xp-tag">REST APIs</span><span class="xp-tag">Government Integration</span>
           </div>
         </article>
 
@@ -608,82 +609,80 @@ a { color: inherit; text-decoration: none; }
           </div>
           <div class="xp-company">Transport Information Technology · TransIT <span class="loc">Nasr City, Egypt</span></div>
           <ul class="xp-bullets">
-            <li>Engineered RESTful APIs that cut response times from 300 ms to 150 ms across high-traffic endpoints.</li>
-            <li>Delivered 5–7 monthly releases with 98.5% uptime, reducing post-deployment bugs by 40% over 12 major releases.</li>
-            <li>Shipped 6+ production backend projects across the transportation sector — ticketing, ride-hailing, tolling, rail, and government workflows.</li>
-            <li>Owned schema design, query tuning, and CI/CD pipelines from feature branch to production.</li>
+            <li>Transportation-sector company associated with the Egyptian Ministry of Transport — built backend systems for production transportation, government, and commercial platforms (see projects below).</li>
+            <li>Real-time communication with SignalR / WebSockets, JWT authentication and authorization, payment gateway and tax authority integrations, and software integration with physical gate hardware.</li>
           </ul>
           <div class="xp-tags">
-            <span class="xp-tag">ASP.NET Core</span><span class="xp-tag">EF Core</span><span class="xp-tag">SQL Server</span><span class="xp-tag">Web Forms</span><span class="xp-tag">SignalR</span><span class="xp-tag">CI/CD</span>
-          </div>
-        </article>
-
-        <article class="xp-item">
-          <div class="xp-row">
-            <div class="xp-title">AI Analyst Intern</div>
-            <div class="xp-period">Oct 2020 — Nov 2020</div>
-          </div>
-          <div class="xp-company">IBM <span class="loc">Egypt</span></div>
-          <ul class="xp-bullets">
-            <li>Built NLP chatbots on IBM Watson Assistant, improving response accuracy by 25%.</li>
-            <li>Trained ML models on IBM Cloud, raising classification accuracy and cutting training time by 15%.</li>
-          </ul>
-          <div class="xp-tags">
-            <span class="xp-tag">IBM Watson</span><span class="xp-tag">NLP</span><span class="xp-tag">Machine Learning</span><span class="xp-tag">IBM Cloud</span>
+            <span class="xp-tag">.NET 6</span><span class="xp-tag">ASP.NET Core</span><span class="xp-tag">SignalR</span><span class="xp-tag">NetTopologySuite</span><span class="xp-tag">JWT</span><span class="xp-tag">SQL Server</span><span class="xp-tag">Django</span><span class="xp-tag">Crystal Reports</span>
           </div>
         </article>
       </section>
 
       <!-- SELECTED PROJECTS -->
       <section class="cv-section">
-        <h2 class="cv-section-title">Selected Projects</h2>
+        <h2 class="cv-section-title">TransIT Projects</h2>
 
         <article class="proj-item">
           <div class="proj-row">
-            <div class="proj-title">Bus Rapid Transit (BRT) Ticketing</div>
+            <div class="proj-title"><a href="https://play.google.com/store/apps/details?id=com.capitalTaxiApp&amp;pcampaignid=web_share" target="_blank" rel="noopener">Capital Taxi — Ride-Hailing Platform</a></div>
+            <div class="proj-stack">SignalR · WebSockets · JWT</div>
+          </div>
+          <ul class="xp-bullets">
+            <li>Real-time driver location tracking, driver availability, and zone-based driver selection.</li>
+            <li>Driver–passenger matching, full trip lifecycle (request → acceptance → tracking → completion), and configurable dynamic fare pricing.</li>
+          </ul>
+        </article>
+
+        <article class="proj-item">
+          <div class="proj-row">
+            <div class="proj-title">Baghdadi Toll Station — Toll &amp; Gate Management</div>
+            <div class="proj-stack">Roads &amp; Bridges Authority</div>
+          </div>
+          <ul class="xp-bullets">
+            <li>Integrated gate software with tag readers, barriers, and Epson receipt printers; tag-based subscriptions trigger automatic gate opening.</li>
+            <li>Operator collection workflow with vehicle category–based fees and ticket generation.</li>
+          </ul>
+        </article>
+
+        <article class="proj-item">
+          <div class="proj-row">
+            <div class="proj-title"><a href="https://abelatrains.com/#/" target="_blank" rel="noopener">Abela — Sleeping Train Reservations</a></div>
+            <div class="proj-stack">Django · .NET · Crystal Reports</div>
+          </div>
+          <ul class="xp-bullets">
+            <li>Django backend for cabin reservations and booking; Egyptian Tax Authority (ETA) integration in .NET; National Bank of Egypt payment gateway.</li>
+            <li>Separate reporting system with ASP.NET Web Forms and Crystal Reports.</li>
+          </ul>
+        </article>
+
+        <article class="proj-item">
+          <div class="proj-row">
+            <div class="proj-title">BRT — Bus Rapid Transit</div>
             <div class="proj-stack">ASP.NET Core · SQL Server</div>
           </div>
-          <p class="proj-desc">Web API ticketing for 500+ daily passengers across 12+ stations. 40% lower booking latency, 10,000+ monthly transactions.</p>
+          <ul class="xp-bullets">
+            <li>Trip booking, ticket purchase, pre-boarding ticket validation, and multi-station / multi-route logic.</li>
+          </ul>
         </article>
 
         <article class="proj-item">
           <div class="proj-row">
-            <div class="proj-title">Capital Taxi — Ride-hailing Backend</div>
-            <div class="proj-stack">SignalR · EF Core</div>
+            <div class="proj-title">Advertising Permits Management System</div>
+            <div class="proj-stack">Roads &amp; Bridges Authority</div>
           </div>
-          <p class="proj-desc">Real-time ride-hailing backend supporting 100+ concurrent users daily, 40% faster geo queries, 200+ drivers onboarded monthly.</p>
+          <ul class="xp-bullets">
+            <li>Permit approval and renewal workflows with pricing by location / zone and advertisement type.</li>
+          </ul>
         </article>
 
         <article class="proj-item">
           <div class="proj-row">
-            <div class="proj-title">Baghdadi Toll Station</div>
-            <div class="proj-stack">RFID · ASP.NET</div>
+            <div class="proj-title"><a href="https://www.mot.gov.eg/Home" target="_blank" rel="noopener">Ministry of Transport Website</a></div>
+            <div class="proj-stack">ASP.NET · CMS</div>
           </div>
-          <p class="proj-desc">50,000+ monthly transactions. RFID integration automating 95% of vehicle detection, saving roughly 15 hours weekly in manual reconciliation.</p>
-        </article>
-
-        <article class="proj-item">
-          <div class="proj-row">
-            <div class="proj-title">Abela Sleeping Trains</div>
-            <div class="proj-stack">Payment Gateway · E-invoice</div>
-          </div>
-          <p class="proj-desc">Reporting platform with Bank El Ahly payment gateway and automated e-invoice compliance with the Egyptian Tax Authority.</p>
-        </article>
-
-        <article class="proj-item">
-          <div class="proj-row">
-            <div class="proj-title">GARB Licensing System</div>
-            <div class="proj-stack">.NET 7 · Workflow</div>
-          </div>
-          <p class="proj-desc">Workflow automation for 100+ monthly road-advertisement licenses with 35% faster approvals.</p>
-        </article>
-
-        <article class="proj-item">
-          <div class="proj-row">
-            <div class="proj-title">Ministry of Transportation CMS</div>
-            <div class="proj-stack">ASP.NET Core · EF Core</div>
-          </div>
-          <p class="proj-desc">Content management cutting update time 50% across 20+ pages; query optimization reduced load time by 40%.</p>
+          <ul class="xp-bullets">
+            <li>Backend and admin dashboard / CMS for news and content, with a publishing workflow reflected on the public site.</li>
+          </ul>
         </article>
       </section>
 
@@ -695,8 +694,8 @@ a { color: inherit; text-decoration: none; }
       <!-- PROFILE -->
       <section class="cv-section profile">
         <h2 class="cv-section-title">Profile</h2>
-        <p>Backend developer focused on <strong>scalable .NET systems</strong>, microservices, and clean data flows. Delivered 6+ production backend projects across transportation, government, and finance.</p>
-        <p>Currently at i-Score, the Egyptian Credit Bureau, building secure cloud-deployed services.</p>
+        <p>Backend engineer with <strong>5 years</strong> of production experience in C# and .NET, across government &amp; financial integrations and real-time transportation platforms.</p>
+        <p>Experienced with SQL Server, Oracle, and EF Core in production, including private and restricted networks.</p>
       </section>
 
       <!-- SKILLS -->
@@ -704,28 +703,32 @@ a { color: inherit; text-decoration: none; }
         <h2 class="cv-section-title">Technical Skills</h2>
 
         <div class="skills-group">
-          <div class="skills-label">Languages &amp; Frameworks</div>
-          <div class="skills-list">C# · .NET Core · ASP.NET Core · Web API · Entity Framework Core · Web Forms · SignalR</div>
+          <div class="skills-label">Backend</div>
+          <div class="skills-list">C# · .NET 8 · .NET 6 · .NET Framework · ASP.NET Core Web API · ASP.NET Web API · REST APIs · Dependency Injection</div>
         </div>
         <div class="skills-group">
-          <div class="skills-label">Databases</div>
-          <div class="skills-list">SQL Server · Oracle · T-SQL · query tuning · indexing · schema design</div>
+          <div class="skills-label">Data</div>
+          <div class="skills-list">SQL Server · Oracle · Entity Framework Core · relational design · entity modeling · validation</div>
         </div>
         <div class="skills-group">
-          <div class="skills-label">Architecture</div>
-          <div class="skills-list">Microservices · REST · event-driven · clean architecture · DDD-lite</div>
+          <div class="skills-label">Security</div>
+          <div class="skills-list">JWT authentication · authorization</div>
         </div>
         <div class="skills-group">
-          <div class="skills-label">Cloud &amp; DevOps</div>
-          <div class="skills-list">Docker · CI/CD · Azure · AWS · Git · GitHub Actions</div>
+          <div class="skills-label">Real-Time &amp; Geospatial</div>
+          <div class="skills-list">SignalR · WebSockets · NetTopologySuite · location-based services</div>
         </div>
         <div class="skills-group">
-          <div class="skills-label">Auth &amp; Security</div>
-          <div class="skills-list">JWT · OAuth 2.0 · role-based access · secure API design</div>
+          <div class="skills-label">Integration</div>
+          <div class="skills-list">Government platforms · financial institutions · payment gateways · third-party APIs · hardware / software</div>
         </div>
         <div class="skills-group">
-          <div class="skills-label">Other</div>
-          <div class="skills-list">Redis · Postman · Swagger / OpenAPI · Agile / Scrum</div>
+          <div class="skills-label">Libraries &amp; Tools</div>
+          <div class="skills-list">AutoMapper · Firebase · ImageSharp · Crystal Reports · ASP.NET Web Forms · Git</div>
+        </div>
+        <div class="skills-group">
+          <div class="skills-label">Additional</div>
+          <div class="skills-list">Python · Django · Flask · Angular</div>
         </div>
       </section>
 
@@ -733,10 +736,10 @@ a { color: inherit; text-decoration: none; }
       <section class="cv-section">
         <h2 class="cv-section-title">Education</h2>
         <article class="edu-item">
-          <div class="edu-degree">B.Sc. Computers &amp; Informatics</div>
-          <div class="edu-school">Zagazig University</div>
-          <div class="edu-meta">Jul 2017 — Jul 2021 · Zagazig, Egypt</div>
-          <p class="edu-note">Graduation project: <strong>Lung &amp; Colon Cancer Diagnosis System</strong> — Grade <em>A+</em>.</p>
+          <div class="edu-degree">B.Sc. in Information Systems</div>
+          <div class="edu-school">Faculty of Computers and Informatics, Zagazig University</div>
+          <div class="edu-meta">2017 — 2021 · Very Good with Honors</div>
+          <p class="edu-note">Graduation project: <strong>Lung &amp; Colon Cancer Diagnosis System</strong> — deep learning histopathology classifier with a Flask backend and Angular frontend. Grade <em>A+</em>.</p>
         </article>
       </section>
 
